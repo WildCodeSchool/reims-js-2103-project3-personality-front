@@ -1,9 +1,94 @@
 @import 'variables.scss';
 
-.bubble {
+.bubble-container {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    border: 1rem solid $yellow-color;
+}
+
+.bubble-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8em;
+    width: 8em;
+    border-radius: 50%;
+    font-family: roboto;
+    font-weight: 700;
+    font-size: 1.2em;
+    margin: 1em;
+}
+
+.yellow {
+    background-color: $yellow-color;
+}
+
+.violet {
+    background-color: $violet-color;
+    color: whitesmoke;
+}
+
+.green {
+    background-color: $green-color;
+}
+
+.pink {
+    background-color: $pink-color;
+}
+
+.bubble-text:hover {
+    transform: scale(2);
+    transition: 0.3s;
+}
+
+.bubble-text:hover span {
+    display: none;
+}
+
+.bubble-text.yellow:hover:before {
+    transform: scale(1.2);
+    font-size: 0.8em;
+    text-align: center;
+    transition: 0.3s;
+    content: "Creativity \A Empathy \A Responsibility \A Sociability";
+    white-space: pre-wrap;
+}
+
+.bubble-text.violet:hover:before {
+    transform: scale(1.2);
+    font-size: 0.8em;
+    text-align: center;
+    transition: 0.3s;
+    content: "Man \A 44yo \A Reims";
+    white-space: pre-wrap;
+}
+
+.bubble-text.green:hover:before {
+    transform: scale(0.4);
+    font-size: 0.8em;
+    text-align: center;
+    transition: 0.3s;
+    content: url("https://nsa40.casimages.com/img/2021/06/02/210602045106742185.jpg");
+    border-radius: 50%;
+    white-space: pre-wrap;
+}
+
+.bubble-text.pink:hover:before {
+    transform: scale(1.2);
+    font-size: 0.8em;
+    text-align: center;
+    transition: 0.3s;
+    content: "Languages \A Code programing \A Marketing skills";
+    white-space: pre-wrap;
+}
+
+@media screen and (max-width: 768px) {
+    .bubble-text {
+        text-align: center;
+        font-size: 0.8em;
+        height: 6em;
+        width: 6em;
+        margin: 0.5em;
+    }
 }
