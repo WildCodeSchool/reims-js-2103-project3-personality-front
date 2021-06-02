@@ -1,10 +1,10 @@
 import React from 'react';
-import './App.css';
+import Screen from './components/Screen';
 
 function App() {
   return (
     <>
-      <p>Hello world</p>
+      <Screen />
     </>
   );
 }
