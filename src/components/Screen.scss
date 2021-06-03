@@ -1,10 +1,22 @@
 @import 'variables.scss';
 
 .bubble-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      ". . pink ."
+      "yellow scarlett scarlett ."
+      ". scarlett scarlett violet"
+      ". green . .";
+    min-height: 80vh;
+}
+
+.scarlett {
+    grid-area: scarlett;
+    width: 53vw;
+    clip-path: circle(34%);
 }
 
 .bubble-text {
@@ -12,29 +24,33 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 6em;
-    width: 6em;
+    height: 18vw;
+    width: 18vw;
     border-radius: 50%;
     font-family: roboto;
     font-weight: 700;
-    font-size: 0.8em;
-    margin: 0.5em;
+    font-size: 3vw;
+    margin: 3vw;
 }
 
 .yellow {
+    grid-area: yellow; 
     background-color: $yellow-color;
 }
 
 .violet {
+    grid-area: violet; 
     background-color: $violet-color;
     color: whitesmoke;
 }
 
 .green {
+    grid-area: green; 
     background-color: $green-color;
 }
 
 .pink {
+    grid-area: pink;
     background-color: $pink-color;
 }
 
@@ -48,8 +64,7 @@
 }
 
 .bubble-text:hover:before {
-    transform: scale(1.2);
-    font-size: 0.8em;
+    font-size: 2.1vw;
     text-align: center;
     transition: 0.3s;
     white-space: pre-wrap;
@@ -60,22 +75,24 @@
 }
 
 .bubble-text.violet:hover:before {
-    content: "Man \A 44yo \A Reims";
+    content: "Woman \A 36yo \A New-York";
 }
 
 .bubble-text.green:hover:before {
     content: url("https://nsa40.casimages.com/img/2021/06/02/210602045106742185.jpg");
+    clip-path: circle(30%);
+    transform: scale(0.4);
 }
 
 .bubble-text.pink:hover:before {
     content: "Languages \A Code programing \A Marketing skills";
 }
 
-@media screen and (min-width: 768px) {
+/* @media screen and (min-width: 768px) {
     .bubble-text {
-        height: 8em;
-        width: 8em;
-        font-size: 1.2em;
+        height: 19vw;
+        width: 19vw;
+        font-size: 2vw;
         margin: 1em;
     }
-}
+}*/

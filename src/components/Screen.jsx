@@ -15,9 +15,10 @@ function Screen() {
             Candidat
           </span>
         </p>
+        <img className="scarlett" src="https://nsa40.casimages.com/img/2021/06/03/21060303483183534.jpg" alt="scarlett" />
         <p className="bubble-text green">
           <span>
-            Swipe
+            Image
           </span>
         </p>
         <p className="bubble-text pink">
