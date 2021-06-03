@@ -7,7 +7,7 @@ function Login() {
     setLogin(!login);
   }
   return (
-    <NavLink exact to="/Screen">
+    <NavLink exact to="/screen">
       <button type="button" onClick={BtnLog}>Login</button>
     </NavLink>
   );

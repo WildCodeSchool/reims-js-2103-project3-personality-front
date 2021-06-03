@@ -10,7 +10,7 @@ function App() {
       <BrowserRouter>
         <Switch>
           <Route path="/" exact component={Login} />
-          <Route path="/Screen" exact component={Screen} />
+          <Route path="/screen" exact component={Screen} />
           <Route component={NotFound} />
         </Switch>
       </BrowserRouter>
