@@ -24,7 +24,7 @@ function Register() {
       },
       body: JSON.stringify(user),
     };
-    const url = 'https://jsonplaceholder.typicode.com/users';
+    const url = 'http://localhost:5000/users';
     fetch(url, config)
       .then((res) => res.json())
       .then((res) => {
