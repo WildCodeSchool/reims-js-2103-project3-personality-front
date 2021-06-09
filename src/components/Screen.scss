@@ -6,8 +6,8 @@
     grid-template-rows: 20vh 20vh 20vh 20vh 20vh;
     gap: 0px 0px;
     grid-template-areas:
-      "personality-logo soft-skills . personality ."
-      ". hard-skills candidate-name . values"
+      "personality-logo soft-skills . . values"
+      ". hard-skills candidate-name personality ."
       ". . candidate-photo . ."
       "state-of-mind . . ambition ."
       ". axis-of-progression . . strength";
@@ -16,13 +16,18 @@
         justify-content: center;
         align-items: center;
         text-align: center;
-        height: 9vw;
-        width: 9vw;
+        height: 16vmin;
+        width: 16vmin;
         border-radius: 50%;
         font-family: roboto;
         font-weight: 700;
         font-size: 1.5vw;
-        margin: 1.5vw;
+    }
+    .button{
+        height: 16vmin;
+        width: 16vmin;
+        border-radius: 50%;
+        cursor: pointer;
     }
     .personality-logo {
         grid-area: personality-logo;
@@ -36,6 +41,7 @@
         position: relative;
         top: 10vh;
         z-index: 1;
+        animation: pulsy 2s infinite;
     }
     .candidate-photo {
         grid-area: candidate-photo;
@@ -45,50 +51,51 @@
     .soft-skills {
         grid-area: soft-skills; 
         background-color: $yellow-color;
-        position: relative;
-        left: 10vh;
+        justify-self: right;
     }
     .hard-skills {
         grid-area: hard-skills; 
         background-color: $green-color;
-        position: relative;
-        right: 10vh;
+        justify-self: start;
     }
     .values {
         grid-area: values; 
         background-color: $green-color;
+        justify-self: center;
+        align-self: start;
     }
     .ambition {
         grid-area: ambition;
-        background-color: $yellow-color;
-        position: relative;
-        left: 10vh;
+        background-color: $green-color;
+        justify-self: center;
+        align-self: end;
     }
     .axis-of-progression {
         grid-area: axis-of-progression; 
         background-color: $pink-color;
-        position: relative;
-        bottom: 10vh;
+        justify-self: center;
+        align-self: end;
     }
     .personality {
         grid-area: personality; 
         background-color: $pink-color;
-        position: relative;
-        top: 10vh;
+        justify-self: start;
+        align-self: end;
+        border: none;
+        font-size: 6vh;
+
     }
     .strength {
         grid-area: strength; 
-        background-color: $green-color;
-        position: relative;
-        bottom: 10vh;
-        left: 10vh;
+        background-color: $yellow-color;
+        justify-self: start;
+        align-self: end;
     }
     .state-of-mind {
         grid-area: state-of-mind; 
         background-color: $yellow-color;
-        position: relative;
-        bottom: 10vh;
-        left: 10vh;
+        justify-self: center;
+        align-self: end;
     }
     .bubble-text:hover {
         transform: scale(2);
