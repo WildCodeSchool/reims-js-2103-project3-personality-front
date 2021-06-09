@@ -2,20 +2,27 @@
 
 .bubble-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 20vw 20vw 20vw 20vw 20vw;
+    grid-template-rows: 20vh 20vh 20vh 20vh 20vh;
     gap: 0px 0px;
     grid-template-areas:
-      ". . pink ."
-      "yellow scarlett scarlett ."
-      ". scarlett scarlett violet"
-      ". green . .";
-    min-height: 80vh;
+      "logo yellow . . ."
+      ". violet . . ."
+      ". . photo . ."
+      ". . . green ."
+      ". pink . . .";
+    max-height: 100vh;
 }
 
-.scarlett {
-    grid-area: scarlett;
-    width: 53vw;
+.personality-logo {
+    grid-area: logo;
+    height: 5vw;
+    margin: 2vw;
+}
+
+.scarlett-photo {
+    grid-area: photo;
+    width: 25vw;
     clip-path: circle(34%);
 }
 
@@ -24,13 +31,13 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 18vw;
-    width: 18vw;
+    height: 9vw;
+    width: 9vw;
     border-radius: 50%;
     font-family: roboto;
     font-weight: 700;
-    font-size: 3vw;
-    margin: 3vw;
+    font-size: 1.5vw;
+    margin: 1.5vw;
 }
 
 .yellow {
@@ -64,7 +71,7 @@
 }
 
 .bubble-text:hover:before {
-    font-size: 2.1vw;
+    font-size: 1vw;
     text-align: center;
     transition: 0.3s;
     white-space: pre-wrap;

@@ -9,13 +9,12 @@ function Screen() {
   return (
     <>
       <div className="bubble-container">
-        <img className="personality-logo-bad" src="https://nsa40.casimages.com/img/2021/06/04/210604110025422732.jpg" alt="personality-logo-bad" />
+        <img className="personality-logo" src="https://nsa40.casimages.com/img/2021/06/09/21060909503933647.gif" alt="personality-logo-bad" />
         <Softskills />
         <Hardskills />
-        <img className="scarlett" src="https://nsa40.casimages.com/img/2021/06/03/21060303483183534.jpg" alt="scarlett" />
+        <img className="scarlett-photo" src="https://nsa40.casimages.com/img/2021/06/03/21060303483183534.jpg" alt="scarlett" />
         <Values />
         <Ambition />
-
       </div>
     </>
   );
