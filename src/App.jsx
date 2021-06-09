@@ -1,19 +1,24 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Login from './components/Login';
+import Home from './components/Home';
 import Screen from './components/Screen';
 import NotFound from './components/NotFound';
+import Register from './components/Register';
+import ScreenContext from './contexts/ScreenContext';
 
 function App() {
   return (
     <>
-      <BrowserRouter>
-        <Switch>
-          <Route path="/" exact component={Login} />
-          <Route path="/screen" exact component={Screen} />
-          <Route component={NotFound} />
-        </Switch>
-      </BrowserRouter>
+      <ScreenContext.Provider>
+        <BrowserRouter>
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/screen" exact component={Screen} />
+            <Route path="/register" exact component={Register} />
+            <Route component={NotFound} />
+          </Switch>
+        </BrowserRouter>
+      </ScreenContext.Provider>
     </>
   );
 }
