@@ -1,0 +1,94 @@
+@import 'variables.scss';
+@-webkit-keyframes pulse {to {box-shadow: 0 0 0 15px rgba(232, 76, 61, 0);}}
+@-moz-keyframes pulse {to {box-shadow: 0 0 0 15px rgba(232, 76, 61, 0);}}
+@-ms-keyframes pulse {to {box-shadow: 0 0 0 15px rgba(232, 76, 61, 0);}}
+@keyframes pulse {to {box-shadow: 0 0 0 15px rgba(232, 76, 61, 0);}}
+
+
+.home-container{
+    display: grid;
+    grid-template-columns: 20vw 20vw 20vw 20vw 20vw;
+    grid-template-rows: 20vh 20vh 20vh 20vh 20vh;
+    gap: 0px 0px;
+    grid-template-areas:
+      ". . . . ."
+      ". . . . ."
+      ". . P . ."
+      ". . . . ."
+      ". S . L .";
+    max-height: 100vh;
+}
+
+.navSign{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    grid-area: S; 
+    text-decoration: none;
+    height: 0;
+}
+
+.navLog{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    grid-area: L; 
+    text-decoration: none;
+    height: 0;
+}
+.logoPer{
+    grid-area: P;
+    height: 10vw;
+}
+
+.btnLog{
+    background-color: $green-color;
+    color: whitesmoke;
+    height: 8vw;
+    width: 8vw;
+    border-radius: 50%;
+    font-family: roboto;
+    font-weight: 700;
+    font-size: 1.5vw;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 0 0 0 hsla(175,39%,44%, 1);
+    -webkit-animation: pulse 2s infinite cubic-bezier(0.66, 0, 0, 1);
+    -moz-animation: pulse 2s infinite cubic-bezier(0.66, 0, 0, 1);
+    -ms-animation: pulse 2s infinite cubic-bezier(0.66, 0, 0, 1);
+    animation: pulse 2s infinite cubic-bezier(0.66, 0, 0, 1);
+}
+
+.btnSign{
+    background-color: $pink-color;
+    color: whitesmoke;
+    height: 8vw;
+    width: 8vw;
+    border-radius: 50%;
+    font-family: roboto;
+    font-weight: 700;
+    font-size: 1.5vw;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 0 0 0 hsla(331,82%,59%, 1);
+    -webkit-animation: pulse 2s infinite cubic-bezier(0.66, 0, 0, 1);
+    -moz-animation: pulse 2s infinite cubic-bezier(0.66, 0, 0, 1);
+    -ms-animation: pulse 2s infinite cubic-bezier(0.66, 0, 0, 1);
+    animation: pulse 2s infinite cubic-bezier(0.66, 0, 0, 1);
+}
+
+.btnLog:hover{
+    -webkit-animation: none;-moz-animation: none;-ms-animation: none;animation: none;
+}
+.btnSign:hover{
+    -webkit-animation: none;-moz-animation: none;-ms-animation: none;animation: none;
+}
+
+
+
+
+
+
+
