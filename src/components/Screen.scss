@@ -1,97 +1,141 @@
 @import 'variables.scss';
 
-.bubble-container {
+.screen-container {
     display: grid;
     grid-template-columns: 20vw 20vw 20vw 20vw 20vw;
     grid-template-rows: 20vh 20vh 20vh 20vh 20vh;
     gap: 0px 0px;
     grid-template-areas:
-      "logo yellow . . ."
-      ". violet . . ."
-      ". . photo . ."
-      ". . . green ."
-      ". pink . . .";
-    max-height: 100vh;
-}
+      "personality-logo soft-skills . . values"
+      ". hard-skills candidate-name personality ."
+      ". . candidate-photo . ."
+      "state-of-mind . . ambition ."
+      ". axis-of-progression . . strength";
+    .bubble-text, .bubble-text-flat {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 16vmin;
+        width: 16vmin;
+        border-radius: 50%;
+        font-family: roboto;
+        font-weight: 700;
+        font-size: 1.5vw;
+    }
+    .button{
+        height: 16vmin;
+        width: 16vmin;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    .personality-logo {
+        grid-area: personality-logo;
+        height: 5vw;
+        margin: 2vw;
+    }
+    .candidate-name {
+        grid-area: candidate-name;
+        background-color: $violet-color;
+        color: whitesmoke;
+        position: relative;
+        top: 10vh;
+        z-index: 1;
+        animation: pulsy 2s infinite;
+    }
+    .candidate-photo {
+        grid-area: candidate-photo;
+        width: 25vw;
+        clip-path: circle(34%);
+    }
+    .soft-skills {
+        grid-area: soft-skills; 
+        background-color: $yellow-color;
+        justify-self: right;
+    }
+    .hard-skills {
+        grid-area: hard-skills; 
+        background-color: $green-color;
+        justify-self: start;
+    }
+    .values {
+        grid-area: values; 
+        background-color: $green-color;
+        justify-self: center;
+        align-self: start;
+    }
+    .ambition {
+        grid-area: ambition;
+        background-color: $green-color;
+        justify-self: center;
+        align-self: end;
+    }
+    .axis-of-progression {
+        grid-area: axis-of-progression; 
+        background-color: $pink-color;
+        justify-self: center;
+        align-self: end;
+    }
+    .personality {
+        grid-area: personality; 
+        background-color: $pink-color;
+        justify-self: start;
+        align-self: end;
+        border: none;
+        font-size: 6vh;
 
-.personality-logo {
-    grid-area: logo;
-    height: 5vw;
-    margin: 2vw;
+    }
+    .strength {
+        grid-area: strength; 
+        background-color: $yellow-color;
+        justify-self: start;
+        align-self: end;
+    }
+    .state-of-mind {
+        grid-area: state-of-mind; 
+        background-color: $yellow-color;
+        justify-self: center;
+        align-self: end;
+    }
+    .bubble-text:hover {
+        transform: scale(2);
+        transition: 0.3s;
+        z-index: 1;
+    }
+    .bubble-text:hover span {
+        display: none;
+    }
+    .bubble-text:hover:before {
+        font-size: 1vw;
+        text-align: center;
+        transition: 0.3s;
+        white-space: pre-wrap;
+    }
+    .bubble-text.soft-skills:hover:before {
+        content: "Creativity \A Empathy \A Responsibility \A Sociability";
+    }
+    .bubble-text.hard-skills:hover:before {
+        content: "Languages \A React programing \A Marketing skills";
+    }
+    .bubble-text.values:hover:before {
+        content: "Respect \A Courage \A Rigor";
+    }
+    .bubble-text.ambition:hover:before {
+        /*content: url("../pictures/44yrold.jpg");
+        clip-path: circle(30%);
+        transform: scale(0.4);*/
+        content: "Learn german \A Manage a team \A Become more efficient";
+    }
+    .bubble-text.axis-of-progression:hover:before {
+        content: "Level in english \A Priority gestion \A PHP programing";
+    }
+    .bubble-text.personality:hover:before {
+        content: "Curiosity \A Energy \A Modesty";
+    }
+    .bubble-text.strength:hover:before {
+        content: "Autonomous \A Meticulous \A Persevering";
+    }
+    .bubble-text.state-of-mind:hover:before {
+        content: "Positive \A Ambitious \A Believe in myself";
+    }
 }
-
-.scarlett-photo {
-    grid-area: photo;
-    width: 25vw;
-    clip-path: circle(34%);
-}
-
-.bubble-text {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: 9vw;
-    width: 9vw;
-    border-radius: 50%;
-    font-family: roboto;
-    font-weight: 700;
-    font-size: 1.5vw;
-    margin: 1.5vw;
-}
-
-.yellow {
-    grid-area: yellow; 
-    background-color: $yellow-color;
-}
-
-.violet {
-    grid-area: violet; 
-    background-color: $violet-color;
-    color: whitesmoke;
-}
-
-.green {
-    grid-area: green; 
-    background-color: $green-color;
-}
-
-.pink {
-    grid-area: pink;
-    background-color: $pink-color;
-}
-
-.bubble-text:hover {
-    transform: scale(2);
-    transition: 0.3s;
-}
-
-.bubble-text:hover span {
-    display: none;
-}
-
-.bubble-text:hover:before {
-    font-size: 1vw;
-    text-align: center;
-    transition: 0.3s;
-    white-space: pre-wrap;
-}
-
-.bubble-text.yellow:hover:before {
-    content: "Creativity \A Empathy \A Responsibility \A Sociability";
-}
-
-.bubble-text.violet:hover:before {
-    content: "Woman \A 36yo \A New-York";
-}
-
-.bubble-text.green:hover:before {
-    content: url("https://nsa40.casimages.com/img/2021/06/02/210602045106742185.jpg");
-    clip-path: circle(30%);
-    transform: scale(0.4);
-}
-
-.bubble-text.pink:hover:before {
-    content: "Languages \A Code programing \A Marketing skills";
-}
-

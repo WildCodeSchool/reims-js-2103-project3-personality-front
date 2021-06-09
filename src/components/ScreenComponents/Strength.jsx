@@ -1,14 +1,14 @@
 import React from 'react';
 import '../Screen.scss';
 
-function Ambition() {
+function Strength() {
   return (
-    <p className="bubble-text ambition">
+    <p className="bubble-text strength">
       <span>
-        Ambition
+        Strength
       </span>
     </p>
   );
 }
 
-export default Ambition;
+export default Strength;

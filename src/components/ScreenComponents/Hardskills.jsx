@@ -3,9 +3,9 @@ import '../Screen.scss';
 
 function Hardskills() {
   return (
-    <p className="bubble-text violet">
+    <p className="bubble-text hard-skills">
       <span>
-        Hardskills
+        Hard skills
       </span>
     </p>
   );

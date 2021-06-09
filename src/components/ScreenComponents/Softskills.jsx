@@ -3,7 +3,7 @@ import '../Screen.scss';
 
 function Softskills() {
   return (
-    <p className="bubble-text yellow">
+    <p className="bubble-text soft-skills">
       <span>
         Soft skills
       </span>
