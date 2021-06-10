@@ -1,4 +1,5 @@
 import React from 'react';
+import './Register.scss';
 
 function Register() {
   const [user, setUser] = React.useState({
@@ -43,7 +44,7 @@ function Register() {
 
   return (
     <div className="FormUser">
-      <h1>New User</h1>
+      <h1>Let&apos;s create your account</h1>
 
       <form onSubmit={submitForm}>
         <fieldset>
@@ -56,6 +57,7 @@ function Register() {
               name="name"
               onChange={onChange}
               value={user.name}
+              placeholder="John Doe"
             />
           </div>
 
@@ -67,6 +69,7 @@ function Register() {
               name="username"
               onChange={onChange}
               value={user.username}
+              placeholder="johndoe"
             />
           </div>
 
@@ -78,6 +81,7 @@ function Register() {
               name="email"
               onChange={onChange}
               value={user.email}
+              placeholder="johndoe@gmail.com"
             />
           </div>
 
@@ -89,6 +93,7 @@ function Register() {
               name="password"
               onChange={onChange}
               value={user.password}
+              placeholder="********"
             />
           </div>
 
@@ -100,13 +105,12 @@ function Register() {
               name="phone"
               onChange={onChange}
               value={user.phone}
+              placeholder="0612345678"
             />
           </div>
 
           <hr />
-          <div className="form-data">
-            <input type="submit" value="Send" />
-          </div>
+          <input className="send-button" type="submit" value="Send" />
         </fieldset>
       </form>
     </div>
