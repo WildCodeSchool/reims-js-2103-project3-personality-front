@@ -12,7 +12,7 @@ $pink-color: hsla(331,82%,59%, 1);
 body {
     margin: 0;
     padding: 0;
-    background-image: url("https://nsa40.casimages.com/img/2021/06/04/210604112304506205.jpg");
+    background-image: url("../pictures/BG.jpg");
     background-size: cover;
     background-position: 0;
     height: 100vh;
@@ -21,6 +21,28 @@ body {
 @keyframes pulsy {
     0% {
         box-shadow: 0 0 0 0 $violet-color;
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(45, 255, 224, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(45, 255, 224, 0);
+    }
+}
+@keyframes pulsyP {
+    0% {
+        box-shadow: 0 0 0 0 $pink-color;
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(45, 255, 224, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(45, 255, 224, 0);
+    }
+}
+@keyframes pulsyG {
+    0% {
+        box-shadow: 0 0 0 0 $green-color;
     }
     70% {
         box-shadow: 0 0 0 15px rgba(45, 255, 224, 0);
