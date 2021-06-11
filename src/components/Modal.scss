@@ -1,9 +1,9 @@
 @import 'variables.scss';
 
 .modal-container{
-    position: relative;
+    position: fixed;
     top:22vh;
-    right: 10vw;
+    right: 28vw;
     z-index: 2;
 }
 .btnclose{
