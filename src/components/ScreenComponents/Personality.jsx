@@ -1,12 +1,21 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import ScreenContext from '../../contexts/ScreenContext';
 import '../Screen.scss';
+import Modal from './Modal';
 
 function Personality() {
-  const [play, setPlay] = React.useState(false);
+  const { play, setPlay } = useContext(ScreenContext);
   return (
-    <button type="button" className="button personality" onClick={() => setPlay(!play)}>
-      &#9654;
-    </button>
+    <>
+      <button type="button" className="button personality" onClick={() => setPlay(!play)}>
+        &#9654;
+      </button>
+      { play === true && (
+        <>
+          <Modal />
+        </>
+      )}
+    </>
   );
 }
 

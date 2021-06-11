@@ -7,9 +7,10 @@ import Register from './components/Register';
 import ScreenContext from './contexts/ScreenContext';
 
 function App() {
+  const [play, setPlay] = React.useState(false);
   return (
     <>
-      <ScreenContext.Provider>
+      <ScreenContext.Provider value={{ play, setPlay }}>
         <BrowserRouter>
           <Switch>
             <Route path="/" exact component={Home} />

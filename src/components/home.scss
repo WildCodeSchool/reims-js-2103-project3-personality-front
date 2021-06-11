@@ -1,8 +1,4 @@
 @import 'variables.scss';
-@-webkit-keyframes pulse {to {box-shadow: 0 0 0 15px rgba(232, 76, 61, 0);}}
-@-moz-keyframes pulse {to {box-shadow: 0 0 0 15px rgba(232, 76, 61, 0);}}
-@-ms-keyframes pulse {to {box-shadow: 0 0 0 15px rgba(232, 76, 61, 0);}}
-@keyframes pulse {to {box-shadow: 0 0 0 15px rgba(232, 76, 61, 0);}}
 
 
 .home-container{
@@ -55,10 +51,7 @@
     cursor: pointer;
     border: none;
     box-shadow: 0 0 0 0 hsla(175,39%,44%, 1);
-    -webkit-animation: pulse 2s infinite cubic-bezier(0.66, 0, 0, 1);
-    -moz-animation: pulse 2s infinite cubic-bezier(0.66, 0, 0, 1);
-    -ms-animation: pulse 2s infinite cubic-bezier(0.66, 0, 0, 1);
-    animation: pulse 2s infinite cubic-bezier(0.66, 0, 0, 1);
+    animation: pulsyG 2s infinite;
 }
 
 .btnSign{
@@ -73,10 +66,7 @@
     cursor: pointer;
     border: none;
     box-shadow: 0 0 0 0 hsla(331,82%,59%, 1);
-    -webkit-animation: pulse 2s infinite cubic-bezier(0.66, 0, 0, 1);
-    -moz-animation: pulse 2s infinite cubic-bezier(0.66, 0, 0, 1);
-    -ms-animation: pulse 2s infinite cubic-bezier(0.66, 0, 0, 1);
-    animation: pulse 2s infinite cubic-bezier(0.66, 0, 0, 1);
+    animation: pulsyP 2s infinite;
 }
 
 .btnLog:hover{

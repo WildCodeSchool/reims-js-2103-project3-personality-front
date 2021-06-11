@@ -1,0 +1,20 @@
+@import 'variables.scss';
+
+.modal-container{
+    position: fixed;
+    top:22vh;
+    right: 28vw;
+    z-index: 2;
+}
+.btnclose{
+    position: relative;
+    background-color: $yellow-color;
+    z-index: 3;
+    border-radius: 50%;
+    top: 12px;
+    right: 10px;
+    cursor: pointer;
+}
+.player{
+    box-shadow: 8px 5px 5px rgba(0, 0, 0, 0.438);
+}
