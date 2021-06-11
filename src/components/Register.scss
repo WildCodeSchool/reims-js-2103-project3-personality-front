@@ -1,0 +1,74 @@
+@import 'variables.scss';
+
+.FormUser {	margin: 2rem auto;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	max-width: 30em;
+	background-color: rgba(255, 255, 255, 0.7);
+	border-radius: 1em;
+	box-shadow: 1em 1em 2em 0 hsla(0, 0, 0, 0.3);;
+	padding: .75em;
+    h1 {
+        color: $violet-color;
+    }
+    form {
+        padding: 2em 1em 0;
+        fieldset {
+            legend {
+                color: $violet-color;
+                font-size: 1.3em;
+                font-weight: 600;
+            }
+            div {
+                display: flex;
+                flex-direction: column-reverse;
+                position: relative;
+                padding-top: 1.5em;
+                &+.input {
+                    margin-top: 1.5em;
+                }
+                label {
+                    color: $violet-color;
+                    position: absolute;
+                    bottom: 2em;
+                    transition: .25s ease;
+                }
+                input {
+                    border: 0;
+                    z-index: 1;
+                    background-color: transparent;
+                    border-bottom: 2px solid white; 
+                    font: inherit;
+                    font-size: 1.125em;
+                    padding: .25em 0;
+                    color: $pink-color;
+                    &:focus, &:valid {
+                        outline: 0;
+                        border-bottom-color: $violet-color;
+                        &+.input-label {
+                            color: $violet-color;
+                            transform: translateY(-1.5em);
+                        }
+                    }
+                }
+            }
+            .send-button {
+                    margin-top: 2em;
+                    font: inherit;
+                    font-size: 1.25em;
+                    padding: 1em;
+                    width: 100%;
+                    font-weight: 500;
+                    background-color: $violet-color;
+                    border-radius: 0.5em;
+                    color: whitesmoke;
+                    border: 0;
+                    &:focus {
+                        outline: 0;
+                    }
+                    cursor: pointer;
+            }
+        }
+    }
+}
