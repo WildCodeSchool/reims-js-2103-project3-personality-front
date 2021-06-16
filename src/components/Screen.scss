@@ -6,11 +6,12 @@
     grid-template-rows: 20vh 20vh 20vh 20vh 20vh;
     gap: 0px 0px;
     grid-template-areas:
-      "personality-logo soft-skills . . values"
-      ". hard-skills candidate-name personality ."
-      ". . candidate-photo . ."
-      "state-of-mind . . ambition ."
-      ". axis-of-progression . . strength";
+      "personality values . axis-of-progression. "
+      "ambition A . B . "
+      ". candidate-name candidate-photo . . "
+      "hard-skills C . D . "
+      "strength soft-skills . . state-of-mind "
+      ;
     .bubble-text, .bubble-text-flat {
         display: flex;
         justify-content: center;
@@ -39,13 +40,13 @@
         background-color: $violet-color;
         color: whitesmoke;
         position: relative;
-        top: 10vh;
+        left: 19vw;
+        bottom: 5vh;
         z-index: 1;
-        animation: pulsy 2s infinite;
     }
     .candidate-photo {
         grid-area: candidate-photo;
-        width: 25vw;
+        width: 20vw;
         clip-path: circle(34%);
     }
     .soft-skills {
@@ -56,7 +57,7 @@
     .hard-skills {
         grid-area: hard-skills; 
         background-color: $green-color;
-        justify-self: start;
+        justify-self: center;
     }
     .values {
         grid-area: values; 
@@ -67,7 +68,7 @@
     .ambition {
         grid-area: ambition;
         background-color: $green-color;
-        justify-self: center;
+        justify-self: end;
         align-self: end;
     }
     .axis-of-progression {
@@ -79,7 +80,7 @@
     .personality {
         grid-area: personality; 
         background-color: $pink-color;
-        justify-self: start;
+        justify-self: center;
         align-self: end;
         border: none;
         font-size: 6vh;
@@ -88,13 +89,13 @@
     .strength {
         grid-area: strength; 
         background-color: $yellow-color;
-        justify-self: start;
+        justify-self: end;
         align-self: end;
     }
     .state-of-mind {
         grid-area: state-of-mind; 
         background-color: $yellow-color;
-        justify-self: center;
+        justify-self: start;
         align-self: end;
     }
     .bubble-text:hover {
@@ -138,4 +139,67 @@
     .bubble-text.state-of-mind:hover:before {
         content: "Positive \A Ambitious \A Believe in myself";
     }
+}
+
+.btnWho{
+    grid-area: A; 
+    background-color: $pink-color;
+    color: whitesmoke;
+    height: 8vw;
+    width: 8vw;
+    border-radius: 50%;
+    font-family: roboto;
+    font-weight: 700;
+    font-size: 1.5vw;
+    cursor: pointer;
+    border: none;
+    animation: pulsyP 2s infinite;
+    justify-self: end;
+    align-self: end;
+}
+.btnPop{
+    grid-area: B; 
+    background-color: $violet-color;
+    color: whitesmoke;
+    height: 8vw;
+    width: 8vw;
+    border-radius: 50%;
+    font-family: roboto;
+    font-weight: 700;
+    font-size: 1.5vw;
+    cursor: pointer;
+    border: none;
+    animation: pulsy 2s infinite;
+    justify-self: start;
+    align-self: end;
+}
+.btnStrength{
+    grid-area: C; 
+    background-color: $yellow-color;
+    color: whitesmoke;
+    height: 8vw;
+    width: 8vw;
+    border-radius: 50%;
+    font-family: roboto;
+    font-weight: 700;
+    font-size: 1.5vw;
+    cursor: pointer;
+    border: none;
+    animation: pulsyY 2s infinite;
+    justify-self: end;
+    align-self: flex-start;
+}
+.btnWhat{
+    grid-area: D; 
+    background-color: $green-color;
+    color: whitesmoke;
+    height: 8vw;
+    width: 8vw;
+    border-radius: 50%;
+    font-family: roboto;
+    font-weight: 700;
+    font-size: 1.5vw;
+    cursor: pointer;
+    border: none;
+    animation: pulsyG 2s infinite;
 }

@@ -1,14 +1,14 @@
 import React from 'react';
 import '../Screen.scss';
 
-function StateOfMind() {
+function Training() {
   return (
     <p className="bubble-text state-of-mind">
       <span>
-        State of mind
+        Formation
       </span>
     </p>
   );
 }
 
-export default StateOfMind;
+export default Training;

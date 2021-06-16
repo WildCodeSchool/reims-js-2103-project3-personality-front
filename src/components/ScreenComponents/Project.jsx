@@ -1,14 +1,14 @@
 import React from 'react';
 import '../Screen.scss';
 
-function AxisOfProgression() {
+function Project() {
   return (
     <p className="bubble-text axis-of-progression">
       <span>
-        Axis of progression
+        Projet
       </span>
     </p>
   );
 }
 
-export default AxisOfProgression;
+export default Project;
