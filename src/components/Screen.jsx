@@ -9,6 +9,7 @@ import Personality from './ScreenComponents/Personality';
 import StateOfMind from './ScreenComponents/StateOfMind';
 import './Screen.scss';
 import PersonalityLogo from './PersonalityLogo';
+import scarlett from '../pictures/scarlett_johansson.jpeg';
 
 function Screen() {
   return (
@@ -18,7 +19,7 @@ function Screen() {
         <Softskills />
         <Hardskills />
         <p className="bubble-text-flat candidate-name">Scarlett Johansson</p>
-        <img className="candidate-photo" src="https://nsa40.casimages.com/img/2021/06/03/21060303483183534.jpg" alt="scarlett" />
+        <img className="candidate-photo" src={scarlett} alt="scarlett" />
         <Values />
         <Ambition />
         <AxisOfProgression />

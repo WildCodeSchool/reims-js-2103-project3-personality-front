@@ -1,9 +1,9 @@
 import React from 'react';
-import Image from '../pictures/personality_logo.png';
+import personnalityLogo from '../pictures/Logo_Personnality_Original.png';
 
 function PersonalityLogo() {
   return (
-    <img className="personality-logo" src={Image} alt="personality-logo" />
+    <img className="personality-logo" src={personnalityLogo} alt="personality-logo" />
   );
 }
 
