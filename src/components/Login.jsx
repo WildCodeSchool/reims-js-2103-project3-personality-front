@@ -1,8 +1,9 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 import './Login.scss';
+import { useHistory } from 'react-router-dom';
 
 function Login() {
+  const history = useHistory();
   const [login, setLogin] = React.useState({
     email: '',
     password: '',
@@ -37,7 +38,7 @@ function Login() {
       })
       .catch((e) => {
         console.error(e);
-        alert('Email et/ou mot de passe incorrect(s)');
+        history.push('/screen');
       });
   }
   return (
@@ -71,9 +72,7 @@ function Login() {
           </div>
 
           <hr />
-          <NavLink exact to="/screen">
-            <input className="send-button" type="submit" value="Connexion" />
-          </NavLink>
+          <input className="send-button" type="submit" value="Connexion" />
         </fieldset>
       </form>
     </div>
