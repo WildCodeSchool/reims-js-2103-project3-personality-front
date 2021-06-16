@@ -10,6 +10,7 @@ import StateOfMind from './ScreenComponents/StateOfMind';
 import './Screen.scss';
 import PersonalityLogo from './PersonalityLogo';
 import scarlett from '../pictures/scarlett_johansson.jpeg';
+import Diapo from './ScreenComponents/Carousel';
 
 function Screen() {
   return (
@@ -27,6 +28,7 @@ function Screen() {
         <Strength />
         <StateOfMind />
       </div>
+      <Diapo />
     </>
   );
 }
