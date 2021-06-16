@@ -5,6 +5,7 @@ import Screen from './components/Screen';
 import NotFound from './components/NotFound';
 import Register from './components/Register';
 import ScreenContext from './contexts/ScreenContext';
+import Login from './components/Login';
 
 function App() {
   const [play, setPlay] = React.useState(false);
@@ -14,6 +15,7 @@ function App() {
         <BrowserRouter>
           <Switch>
             <Route path="/" exact component={Home} />
+            <Route path="/login" exact component={Login} />
             <Route path="/screen" exact component={Screen} />
             <Route path="/register" exact component={Register} />
             <Route component={NotFound} />

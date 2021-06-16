@@ -4,17 +4,15 @@ import Logo from '../pictures/Logo_Personnality_Original.png';
 import './home.scss';
 
 function Home() {
-  const [login, setLogin] = React.useState(false);
-  const [signup, setSignup] = React.useState(false);
   return (
     <>
       <div className="home-container">
         <img className="logoPer" src={Logo} alt="logo" />
-        <NavLink className="navLog" exact to="/screen">
-          <button className="btnLog" type="button" onClick={() => setLogin(!login)}>Login</button>
+        <NavLink className="btnLog navLog" exact to="/login">
+          Login
         </NavLink>
-        <NavLink className="navSign" exact to="/register">
-          <button className="btnSign" type="button" onClick={() => setSignup(!signup)}>SignUp</button>
+        <NavLink className="btnSign navSign" exact to="/register">
+          SignUp
         </NavLink>
       </div>
     </>
