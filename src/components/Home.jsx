@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import Logo from '../pictures/personality_logo.png';
+import Logo from '../pictures/Logo_Personnality_Original.png';
 import './home.scss';
 
 function Home() {
