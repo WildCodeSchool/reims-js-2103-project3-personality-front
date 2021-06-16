@@ -10,7 +10,7 @@ function Home() {
     <>
       <div className="home-container">
         <img className="logoPer" src={Logo} alt="logo" />
-        <NavLink className="navLog" exact to="/screen">
+        <NavLink className="navLog" exact to="/login">
           <button className="btnLog" type="button" onClick={() => setLogin(!login)}>Login</button>
         </NavLink>
         <NavLink className="navSign" exact to="/register">

@@ -33,12 +33,12 @@ function Register() {
         if (res.error) {
           alert(res.error);
         } else {
-          alert(`User #${res.id} has been successfully added!`);
+          alert('L’utilisateur a été ajouté avec succès !');
         }
       })
       .catch((e) => {
         console.error(e);
-        alert('There was an error when adding the user.');
+        alert('Une erreur s’est produite lors de l’ajout de l’utilisateur.');
       });
   }
 
