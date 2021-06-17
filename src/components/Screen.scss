@@ -1,75 +1,76 @@
 @import 'variables.scss';
 
+
 .screen-container {
     display: grid;
-    grid-template-columns: 20vw 20vw 20vw 20vw 20vw;
-    grid-template-rows: 20vh 20vh 20vh 20vh 20vh;
+    grid-template-columns: 14vw 14vw 14vw 14vw 14vw 14vw 14vw;
+    grid-template-rows: 14vh 14vh 14vh 14vh 14vh 14vh 14vh;
     gap: 0px 0px;
     grid-template-areas:
-      "personality values . axis-of-progression. "
-      "ambition A . B . "
-      ". candidate-name candidate-photo . . "
-      "hard-skills C . D . "
-      "strength soft-skills . . state-of-mind "
+      ". personality values . axis-of-progression. . "
+      ". ambition A . B . . "
+      ". . candidate-name candidate-photo . . . "
+      ". hard-skills C . D . . "
+      ". strength soft-skills . . state-of-mind . "
       ;
+      margin-top: 10vh;
     .bubble-text, .bubble-text-flat {
         display: flex;
         justify-content: center;
         align-items: center;
         text-align: center;
-        height: 16vmin;
-        width: 16vmin;
+        height: 14vmin;
+        width: 14vmin;
         border-radius: 50%;
         font-family: roboto;
         font-weight: 700;
-        font-size: 1.5vw;
+        font-size: 1.2vw;
     }
     .button{
-        height: 16vmin;
-        width: 16vmin;
+        height: 14vmin;
+        width: 14vmin;
         border-radius: 50%;
         cursor: pointer;
     }
-    .personality-logo {
-        grid-area: personality-logo;
-        height: 5vw;
-        margin: 2vw;
-    }
+
     .candidate-name {
         grid-area: candidate-name;
         background-color: $violet-color;
         color: whitesmoke;
         position: relative;
-        left: 19vw;
-        bottom: 5vh;
+        left: 10vw;
+        bottom: 1.15vw;
         z-index: 1;
     }
     .candidate-photo {
         grid-area: candidate-photo;
         width: 20vw;
         clip-path: circle(34%);
+        justify-self: center;
+        align-self: center;
     }
     .soft-skills {
         grid-area: soft-skills; 
-        background-color: $yellow-color;
-        justify-self: right;
-    }
-    .hard-skills {
-        grid-area: hard-skills; 
-        background-color: $green-color;
-        justify-self: center;
-    }
-    .values {
-        grid-area: values; 
         background-color: $green-color;
         justify-self: center;
         align-self: start;
     }
+    .hard-skills {
+        grid-area: hard-skills; 
+        background-color: $violet-color;
+        justify-self: end;
+    }
+    .values {
+        grid-area: values; 
+        background-color: $violet-color;
+        justify-self: start;
+        align-self: end;
+    }
     .ambition {
         grid-area: ambition;
-        background-color: $green-color;
+        background-color: $yellow-color;
         justify-self: end;
-        align-self: end;
+        align-self: flex-start;
     }
     .axis-of-progression {
         grid-area: axis-of-progression; 
@@ -79,7 +80,7 @@
     }
     .personality {
         grid-area: personality; 
-        background-color: $pink-color;
+        background-color: $green-color;
         justify-self: center;
         align-self: end;
         border: none;
@@ -88,9 +89,9 @@
     }
     .strength {
         grid-area: strength; 
-        background-color: $yellow-color;
-        justify-self: end;
-        align-self: end;
+        background-color: $pink-color;
+        justify-self: start;
+        align-self: start;
     }
     .state-of-mind {
         grid-area: state-of-mind; 
@@ -107,7 +108,7 @@
         display: none;
     }
     .bubble-text:hover:before {
-        font-size: 1vw;
+        font-size: 0.8vw;
         text-align: center;
         transition: 0.3s;
         white-space: pre-wrap;
@@ -145,8 +146,8 @@
     grid-area: A; 
     background-color: $pink-color;
     color: whitesmoke;
-    height: 8vw;
-    width: 8vw;
+    height: 17vmin;
+    width: 17vmin;
     border-radius: 50%;
     font-family: roboto;
     font-weight: 700;
@@ -161,8 +162,8 @@
     grid-area: B; 
     background-color: $violet-color;
     color: whitesmoke;
-    height: 8vw;
-    width: 8vw;
+    height: 17vmin;
+    width: 17vmin;
     border-radius: 50%;
     font-family: roboto;
     font-weight: 700;
@@ -177,8 +178,8 @@
     grid-area: C; 
     background-color: $yellow-color;
     color: whitesmoke;
-    height: 8vw;
-    width: 8vw;
+    height: 17vmin;
+    width: 17vmin;
     border-radius: 50%;
     font-family: roboto;
     font-weight: 700;
@@ -193,8 +194,8 @@
     grid-area: D; 
     background-color: $green-color;
     color: whitesmoke;
-    height: 8vw;
-    width: 8vw;
+    height: 17vmin;
+    width: 17vmin;
     border-radius: 50%;
     font-family: roboto;
     font-weight: 700;

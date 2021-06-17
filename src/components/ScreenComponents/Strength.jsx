@@ -5,7 +5,7 @@ function Strength() {
   return (
     <p className="bubble-text strength">
       <span>
-        Strength
+        Forces
       </span>
     </p>
   );

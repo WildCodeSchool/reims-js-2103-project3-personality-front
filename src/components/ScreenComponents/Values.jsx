@@ -5,7 +5,7 @@ function Values() {
   return (
     <p className="bubble-text values">
       <span>
-        Values
+        Valeurs
       </span>
     </p>
   );
