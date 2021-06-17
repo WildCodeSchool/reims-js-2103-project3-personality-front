@@ -1,14 +1,14 @@
 import React from 'react';
 import '../Screen.scss';
 
-function Project() {
+function Diplome() {
   return (
-    <p className="bubble-text projet">
+    <p className="bubble-text diplome">
       <span>
-        Projet
+        Diplôme
       </span>
     </p>
   );
 }
 
-export default Project;
+export default Diplome;

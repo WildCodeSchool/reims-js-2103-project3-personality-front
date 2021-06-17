@@ -1,14 +1,14 @@
 import React from 'react';
 import '../Screen.scss';
 
-function Project() {
+function LastJob() {
   return (
-    <p className="bubble-text projet">
+    <p className="bubble-text lastJob">
       <span>
-        Projet
+        Last job
       </span>
     </p>
   );
 }
 
-export default Project;
+export default LastJob;

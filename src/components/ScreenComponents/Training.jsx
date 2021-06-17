@@ -3,7 +3,7 @@ import '../Screen.scss';
 
 function Training() {
   return (
-    <p className="bubble-text state-of-mind">
+    <p className="bubble-text training">
       <span>
         Formation
       </span>

@@ -4,6 +4,11 @@ import Hardskills from './ScreenComponents/Hardskills';
 import Values from './ScreenComponents/Values';
 import Ambition from './ScreenComponents/Ambition';
 import Project from './ScreenComponents/Project';
+import ProjectImg from './ScreenComponents/ProjectImg';
+import ProjectPdf from './ScreenComponents/ProjectPdf';
+import LastJob from './ScreenComponents/LastJob';
+import Langues from './ScreenComponents/Langues';
+import Diplome from './ScreenComponents/Diplome';
 import Strength from './ScreenComponents/Strength';
 import Personality from './ScreenComponents/Personality';
 import Training from './ScreenComponents/Training';
@@ -36,7 +41,11 @@ function Screen() {
           )}
 
           { pop === true && (
-          <Project />
+          <>
+            <Project />
+            <ProjectPdf />
+            <ProjectImg />
+          </>
           )}
 
           { strength === true && (
@@ -48,7 +57,12 @@ function Screen() {
           )}
 
           { what === true && (
-          <Training />
+          <>
+            <Training />
+            <Langues />
+            <LastJob />
+            <Diplome />
+          </>
           )}
 
         </div>

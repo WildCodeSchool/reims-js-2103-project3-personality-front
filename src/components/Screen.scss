@@ -7,11 +7,11 @@
     grid-template-rows: 14vh 14vh 14vh 14vh 14vh 14vh 14vh;
     gap: 0px 0px;
     grid-template-areas:
-      ". personality values . axis-of-progression. . "
-      ". ambition A . B . . "
+      ". personality values . projet pPdf . "
+      ". ambition A . B pImg . "
       ". . candidate-name candidate-photo . . . "
-      ". hard-skills C . D . . "
-      ". strength soft-skills . . state-of-mind . "
+      ". hard-skills C . D lastJob . "
+      ". strength soft-skills diplome langues training . "
       ;
       margin-top: 10vh;
     .bubble-text, .bubble-text-flat {
@@ -52,13 +52,14 @@
     .soft-skills {
         grid-area: soft-skills; 
         background-color: $green-color;
-        justify-self: center;
+        justify-self: start;
         align-self: start;
     }
     .hard-skills {
         grid-area: hard-skills; 
         background-color: $violet-color;
         justify-self: end;
+        align-self: end;
     }
     .values {
         grid-area: values; 
@@ -72,10 +73,10 @@
         justify-self: end;
         align-self: flex-start;
     }
-    .axis-of-progression {
-        grid-area: axis-of-progression; 
+    .projet {
+        grid-area: projet; 
         background-color: $pink-color;
-        justify-self: center;
+        justify-self: end;
         align-self: end;
     }
     .personality {
@@ -91,13 +92,43 @@
         grid-area: strength; 
         background-color: $pink-color;
         justify-self: start;
+        align-self: center;
+    }
+    .training {
+        grid-area: training; 
+        background-color: $green-color;
+        justify-self: end;
+        align-self: end;
+    }
+    .langues {
+        grid-area: langues; 
+        background-color: $yellow-color;
+        justify-self: end;
         align-self: start;
     }
-    .state-of-mind {
-        grid-area: state-of-mind; 
-        background-color: $yellow-color;
+    .lastJob {
+        grid-area: lastJob; 
+        background-color: $violet-color;
         justify-self: start;
         align-self: end;
+    }
+    .diplome {
+        grid-area: diplome; 
+        background-color: $pink-color;
+        justify-self: end;
+        align-self: center;
+    }
+    .projetPdf{
+        grid-area: pPdf; 
+        background-color: $green-color;
+        justify-self: end;
+        align-self: start;
+    }
+    .projetImg{
+        grid-area: pImg; 
+        background-color: $yellow-color;
+        justify-self: start;
+        align-self: start;
     }
     .bubble-text:hover {
         transform: scale(2);

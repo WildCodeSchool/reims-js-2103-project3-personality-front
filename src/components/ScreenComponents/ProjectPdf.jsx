@@ -1,14 +1,14 @@
 import React from 'react';
 import '../Screen.scss';
 
-function Project() {
+function ProjectPdf() {
   return (
-    <p className="bubble-text projet">
+    <p className="bubble-text projetPdf">
       <span>
-        Projet
+        Pdf
       </span>
     </p>
   );
 }
 
-export default Project;
+export default ProjectPdf;
