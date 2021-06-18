@@ -8,11 +8,11 @@ function Home() {
     <>
       <div className="home-container">
         <img className="logoPer" src={Logo} alt="logo" />
-        <NavLink className="btnLog navLog" exact to="/login">
-          Login
-        </NavLink>
         <NavLink className="btnSign navSign" exact to="/register">
-          SignUp
+          S&apos;inscrire
+        </NavLink>
+        <NavLink className="btnLog navLog" exact to="/login">
+          Connexion
         </NavLink>
       </div>
     </>
