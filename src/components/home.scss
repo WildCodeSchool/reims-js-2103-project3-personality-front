@@ -1,6 +1,5 @@
 @import 'variables.scss';
 
-
 .home-container{
     display: grid;
     grid-template-columns: 20vw 20vw 20vw 20vw 20vw;
@@ -9,45 +8,50 @@
     grid-template-areas:
       ". . . . ."
       ". . . . ."
-      ". . P . ."
+      ". . logo . ."
       ". . . . ."
-      ". S . L .";
-    max-height: 100vh;
+      ". signup . login .";
+    max-height: 100vmin;
+}
+
+.logoPer{
+    grid-area: logo;
+    height: 15vmin;
+    justify-self: center;
+    align-self: center;
 }
 
 .navSign{
+    grid-area: signup; 
     display: flex;
     justify-content: center;
     align-items: center;
+    justify-self: center;
     text-align: center;
-    grid-area: S; 
     text-decoration: none;
     height: 0;
 }
 
 .navLog{
+    grid-area: login; 
     display: flex;
     justify-content: center;
     align-items: center;
+    justify-self: center;
     text-align: center;
-    grid-area: L; 
     text-decoration: none;
     height: 0;
-}
-.logoPer{
-    grid-area: P;
-    height: 10vw;
 }
 
 .btnLog{
     background-color: $green-color;
     color: whitesmoke;
-    height: 8vw;
-    width: 8vw;
+    height: 12vmin;
+    width: 12vmin;
     border-radius: 50%;
-    font-family: roboto;
+    font-family: $sans-serif-font;
     font-weight: 700;
-    font-size: 1.5vw;
+    font-size: 2vmin;
     cursor: pointer;
     border: none;
     box-shadow: 0 0 0 0 hsla(175,39%,44%, 1);
@@ -57,12 +61,12 @@
 .btnSign{
     background-color: $pink-color;
     color: whitesmoke;
-    height: 8vw;
-    width: 8vw;
+    height: 12vmin;
+    width: 12vmin;
     border-radius: 50%;
-    font-family: roboto;
+    font-family: $sans-serif-font;
     font-weight: 700;
-    font-size: 1.5vw;
+    font-size: 2vmin;
     cursor: pointer;
     border: none;
     box-shadow: 0 0 0 0 hsla(331,82%,59%, 1);
@@ -75,10 +79,3 @@
 .btnSign:hover{
     -webkit-animation: none;-moz-animation: none;-ms-animation: none;animation: none;
 }
-
-
-
-
-
-
-
