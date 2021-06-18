@@ -9,7 +9,7 @@ function Home() {
       <div className="home-container">
         <img className="logoPer" src={Logo} alt="logo" />
         <NavLink className="btnSign navSign" exact to="/register">
-          S&apos;inscrire
+          Inscription
         </NavLink>
         <NavLink className="btnLog navLog" exact to="/login">
           Connexion
