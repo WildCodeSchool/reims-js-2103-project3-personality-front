@@ -101,6 +101,18 @@ function Register() {
             </div>
 
             <div className="form-data">
+              <label htmlFor="confirmPassword">Mot de passe</label>
+              <input
+                type="password"
+                id="confirmPassword"
+                name="confirmPassword"
+                onChange={onChange}
+                value={user.password}
+                placeholder="********"
+              />
+            </div>
+
+            <div className="form-data">
               <label htmlFor="phone">Téléphone</label>
               <input
                 type="text"
