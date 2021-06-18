@@ -1,14 +1,14 @@
 import React from 'react';
 import '../Screen.scss';
 
-function Values() {
+function Langues() {
   return (
-    <p className="bubble-text values">
+    <p className="bubble-text langues">
       <span>
-        Valeurs
+        Langues
       </span>
     </p>
   );
 }
 
-export default Values;
+export default Langues;

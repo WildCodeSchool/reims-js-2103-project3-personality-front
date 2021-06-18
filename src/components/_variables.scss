@@ -50,3 +50,14 @@ body {
         box-shadow: 0 0 0 0 rgba(45, 255, 224, 0);
     }
 }
+@keyframes pulsyY {
+    0% {
+        box-shadow: 0 0 0 0 $yellow-color;
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(45, 255, 224, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(45, 255, 224, 0);
+    }
+}

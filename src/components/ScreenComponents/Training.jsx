@@ -1,14 +1,14 @@
 import React from 'react';
 import '../Screen.scss';
 
-function Values() {
+function Training() {
   return (
-    <p className="bubble-text values">
+    <p className="bubble-text training">
       <span>
-        Valeurs
+        Formation
       </span>
     </p>
   );
 }
 
-export default Values;
+export default Training;

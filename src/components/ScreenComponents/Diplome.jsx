@@ -1,14 +1,14 @@
 import React from 'react';
 import '../Screen.scss';
 
-function Values() {
+function Diplome() {
   return (
-    <p className="bubble-text values">
+    <p className="bubble-text diplome">
       <span>
-        Valeurs
+        Diplôme
       </span>
     </p>
   );
 }
 
-export default Values;
+export default Diplome;

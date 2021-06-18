@@ -1,14 +1,14 @@
 import React from 'react';
 import '../Screen.scss';
 
-function Values() {
+function ProjectImg() {
   return (
-    <p className="bubble-text values">
+    <p className="bubble-text projetImg">
       <span>
-        Valeurs
+        Image
       </span>
     </p>
   );
 }
 
-export default Values;
+export default ProjectImg;

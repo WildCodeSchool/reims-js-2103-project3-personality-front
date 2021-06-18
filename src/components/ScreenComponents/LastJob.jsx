@@ -1,14 +1,14 @@
 import React from 'react';
 import '../Screen.scss';
 
-function Values() {
+function LastJob() {
   return (
-    <p className="bubble-text values">
+    <p className="bubble-text lastJob">
       <span>
-        Valeurs
+        Last job
       </span>
     </p>
   );
 }
 
-export default Values;
+export default LastJob;
