@@ -26,10 +26,10 @@ function Screen() {
       <div className="screen">
         <div className="screen-container">
           <img className="candidate-photo" src={scarlett} alt="scarlett" />
-          <button className="btnWho" type="button" onClick={() => setWho(!who)}>Qui suis-je ?</button>
-          <button className="btnPop" type="button" onClick={() => setPop(!pop)}>POP</button>
-          <button className="btnStrength" type="button" onClick={() => setStrength(!strength)}>Mes Skills</button>
-          <button className="btnWhat" type="button" onClick={() => setWhat(!what)}>What else ?</button>
+          <button className="btnWho" type="button" onClick={() => setWho(!who) || setStrength(false) || setWhat(false || setPop(false))}>Qui suis-je ?</button>
+          <button className="btnPop" type="button" onClick={() => setPop(!pop) || setWho(false || setWhat(false) || setStrength(false))}>POP</button>
+          <button className="btnStrength" type="button" onClick={() => setStrength(!strength) || setWho(false || setWhat(false) || setPop(false))}>Mes Skills</button>
+          <button className="btnWhat" type="button" onClick={() => setWhat(!what) || setPop(false) || setStrength(false) || setWho(false)}>What else ?</button>
 
           { who === true && (
           <>
