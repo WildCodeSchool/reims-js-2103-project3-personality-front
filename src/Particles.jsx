@@ -3,7 +3,7 @@ import './Particles.css';
 
 function Particles() {
   tsParticles.load('tsparticles', {
-    fpsLimit: 60,
+    fpsLimit: 50,
     particles: {
       number: {
         value: 0,
