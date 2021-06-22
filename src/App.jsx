@@ -6,11 +6,14 @@ import NotFound from './components/NotFound';
 import Register from './components/Register';
 import ScreenContext from './contexts/ScreenContext';
 import Login from './components/Login';
+import Particles from './Particles';
 
 function App() {
   const [play, setPlay] = React.useState(false);
+
   return (
     <>
+      <Particles />
       <ScreenContext.Provider value={{ play, setPlay }}>
         <BrowserRouter>
           <Switch>
