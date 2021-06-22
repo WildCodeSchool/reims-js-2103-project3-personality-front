@@ -51,25 +51,27 @@
     }
     .soft-skills {
         grid-area: soft-skills; 
-        background-color: $green-color;
+        background-color: $yellow-color;
         justify-self: start;
         align-self: start;
     }
     .hard-skills {
         grid-area: hard-skills; 
-        background-color: $violet-color;
+        background-color: $yellow-color;
         justify-self: end;
         align-self: end;
     }
     .values {
         grid-area: values; 
         background-color: $violet-color;
+        color: whitesmoke;
         justify-self: start;
         align-self: end;
     }
     .ambition {
         grid-area: ambition;
-        background-color: $yellow-color;
+        background-color: $violet-color;
+        color: whitesmoke;
         justify-self: end;
         align-self: flex-start;
     }
@@ -81,7 +83,8 @@
     }
     .personality {
         grid-area: personality; 
-        background-color: $green-color;
+        background-color: $violet-color;
+        color: whitesmoke;
         justify-self: center;
         align-self: end;
         border: none;
@@ -90,7 +93,7 @@
     }
     .strength {
         grid-area: strength; 
-        background-color: $pink-color;
+        background-color: $yellow-color;
         justify-self: start;
         align-self: center;
     }
@@ -102,31 +105,31 @@
     }
     .langues {
         grid-area: langues; 
-        background-color: $yellow-color;
+        background-color: $green-color;
         justify-self: end;
         align-self: start;
     }
     .lastJob {
         grid-area: lastJob; 
-        background-color: $violet-color;
+        background-color: $green-color;
         justify-self: start;
         align-self: end;
     }
     .diplome {
         grid-area: diplome; 
-        background-color: $pink-color;
+        background-color: $green-color;
         justify-self: end;
         align-self: center;
     }
     .projetPdf{
         grid-area: pPdf; 
-        background-color: $green-color;
+        background-color: $pink-color;
         justify-self: end;
         align-self: start;
     }
     .projetImg{
         grid-area: pImg; 
-        background-color: $yellow-color;
+        background-color: $pink-color;
         justify-self: start;
         align-self: start;
     }
@@ -175,22 +178,6 @@
 
 .btnWho{
     grid-area: A; 
-    background-color: $pink-color;
-    color: whitesmoke;
-    height: 17vmin;
-    width: 17vmin;
-    border-radius: 50%;
-    font-family: roboto;
-    font-weight: 700;
-    font-size: 1.5vw;
-    cursor: pointer;
-    border: none;
-    animation: pulsyP 2s infinite;
-    justify-self: end;
-    align-self: end;
-}
-.btnPop{
-    grid-area: B; 
     background-color: $violet-color;
     color: whitesmoke;
     height: 17vmin;
@@ -202,13 +189,29 @@
     cursor: pointer;
     border: none;
     animation: pulsy 2s infinite;
+    justify-self: end;
+    align-self: end;
+}
+.btnPop{
+    grid-area: B; 
+    background-color: $pink-color;
+    color: black;
+    height: 17vmin;
+    width: 17vmin;
+    border-radius: 50%;
+    font-family: roboto;
+    font-weight: 700;
+    font-size: 1.5vw;
+    cursor: pointer;
+    border: none;
+    animation: pulsyP 2s infinite;
     justify-self: start;
     align-self: end;
 }
 .btnStrength{
     grid-area: C; 
     background-color: $yellow-color;
-    color: whitesmoke;
+    color: black;
     height: 17vmin;
     width: 17vmin;
     border-radius: 50%;
@@ -224,7 +227,7 @@
 .btnWhat{
     grid-area: D; 
     background-color: $green-color;
-    color: whitesmoke;
+    color: black;
     height: 17vmin;
     width: 17vmin;
     border-radius: 50%;
