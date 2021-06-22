@@ -16,22 +16,26 @@ import './Screen.scss';
 import scarlett from '../pictures/scarlett_johansson.jpeg';
 import Diapo from './ScreenComponents/Carousel';
 
+const allClosed = {
+  who: false, strength: false, what: false, pop: false,
+};
+
 function Screen() {
-  const [who, setWho] = React.useState(false);
-  const [pop, setPop] = React.useState(false);
-  const [strength, setStrength] = React.useState(false);
-  const [what, setWhat] = React.useState(false);
+  const [isOpen, setOpen] = React.useState(allClosed);
+  const toggle = (keyToOpen) => {
+    setOpen({ ...allClosed, [keyToOpen]: !isOpen[keyToOpen] });
+  };
   return (
     <>
       <div className="screen">
         <div className="screen-container">
           <img className="candidate-photo" src={scarlett} alt="scarlett" />
-          <button className="btnWho" type="button" onClick={() => setWho(!who)}>Qui suis-je ?</button>
-          <button className="btnPop" type="button" onClick={() => setPop(!pop)}>POP</button>
-          <button className="btnStrength" type="button" onClick={() => setStrength(!strength)}>Mes Skills</button>
-          <button className="btnWhat" type="button" onClick={() => setWhat(!what)}>What else ?</button>
+          <button className="btnWho" type="button" onClick={() => toggle('who')}>Qui suis-je ?</button>
+          <button className="btnPop" type="button" onClick={() => toggle('pop')}>POP</button>
+          <button className="btnStrength" type="button" onClick={() => toggle('strength')}>Mes Skills</button>
+          <button className="btnWhat" type="button" onClick={() => toggle('what')}>What else ?</button>
 
-          { who === true && (
+          { isOpen.who === true && (
           <>
             <p className="bubble-text-flat candidate-name">Scarlett Johansson</p>
             <Personality />
@@ -40,7 +44,7 @@ function Screen() {
           </>
           )}
 
-          { pop === true && (
+          { isOpen.pop === true && (
           <>
             <Project />
             <ProjectPdf />
@@ -48,7 +52,7 @@ function Screen() {
           </>
           )}
 
-          { strength === true && (
+          { isOpen.strength === true && (
           <>
             <Softskills />
             <Hardskills />
@@ -56,7 +60,7 @@ function Screen() {
           </>
           )}
 
-          { what === true && (
+          { isOpen.what === true && (
           <>
             <Training />
             <Langues />
