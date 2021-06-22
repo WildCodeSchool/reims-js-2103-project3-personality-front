@@ -1,5 +1,4 @@
 import { tsParticles } from 'tsparticles';
-import React from 'react';
 import './Particles.css';
 
 function Particles() {
@@ -147,9 +146,7 @@ function Particles() {
       },
     ],
   });
-  return (
-    <div id="tsparticles" />
-  );
+  return null;
 }
 
 export default Particles;
