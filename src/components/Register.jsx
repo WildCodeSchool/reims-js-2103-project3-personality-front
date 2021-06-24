@@ -101,7 +101,7 @@ function Register() {
             </div>
 
             <div className="form-data">
-              <label htmlFor="confirmPassword">Mot de passe</label>
+              <label htmlFor="confirmPassword">Vérification du mot de passe</label>
               <input
                 type="password"
                 id="confirmPassword"

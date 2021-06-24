@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Softskills from './ScreenComponents/Softskills';
 import Hardskills from './ScreenComponents/Hardskills';
 import Values from './ScreenComponents/Values';
@@ -21,23 +21,24 @@ const allClosed = {
 };
 
 function Screen() {
-  const [isOpen, setOpen] = React.useState(allClosed);
+  const [isOpen, setOpen] = useState(allClosed);
   const toggle = (keyToOpen) => {
     setOpen({ ...allClosed, [keyToOpen]: !isOpen[keyToOpen] });
   };
+
   return (
     <>
       <div className="screen">
         <div className="screen-container">
           <img className="candidate-photo" src={scarlett} alt="scarlett" />
-          <button className="btnWho" type="button" onClick={() => toggle('who')}>Qui suis-je ?</button>
+          <button href="b" className="btnWho" type="button" onClick={() => toggle('who')}>Qui suis-je ?</button>
           <button className="btnPop" type="button" onClick={() => toggle('pop')}>POP</button>
           <button className="btnStrength" type="button" onClick={() => toggle('strength')}>Mes Skills</button>
           <button className="btnWhat" type="button" onClick={() => toggle('what')}>What else ?</button>
 
           { isOpen.who === true && (
           <>
-            <p className="bubble-text-flat candidate-name">Scarlett Johansson</p>
+            <p className="bubble-text-flat candidate-name tonfa">Scarlett Johansson</p>
             <Personality />
             <Values />
             <Ambition />

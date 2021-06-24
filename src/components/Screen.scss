@@ -2,18 +2,20 @@
 
 
 .screen-container {
+    //margin-top: 10vh;
     display: grid;
     grid-template-columns: 14vw 14vw 14vw 14vw 14vw 14vw 14vw;
     grid-template-rows: 14vh 14vh 14vh 14vh 14vh 14vh 14vh;
     gap: 0px 0px;
     grid-template-areas:
-      ". personality values . projet pPdf . "
-      ". ambition A . B pImg . "
-      ". . candidate-name candidate-photo . . . "
-      ". hard-skills C . D lastJob . "
-      ". strength soft-skills diplome langues training . "
+      ". . . . . . ."
+      ". personality values . projet pPdf ."
+      ". ambition A . B pImg ."
+      ". . candidate-name candidate-photo . . ."
+      ". hard-skills C . D lastJob ."
+      ". strength soft-skills diplome langues training ."
+      ". . . . . . ."
       ;
-      margin-top: 10vh;
     .bubble-text, .bubble-text-flat {
         display: flex;
         justify-content: center;
@@ -32,21 +34,61 @@
         border-radius: 50%;
         cursor: pointer;
     }
-
-    .candidate-name {
-        grid-area: candidate-name;
-        background-color: $violet-color;
-        color: whitesmoke;
-        position: relative;
-        left: 10vw;
-        bottom: 1.15vw;
-        z-index: 1;
-    }
     .candidate-photo {
         grid-area: candidate-photo;
         width: 20vw;
         clip-path: circle(34%);
         justify-self: center;
+        align-self: center;
+    }
+    .candidate-name {
+        grid-area: candidate-name;
+        background-color: $pink-color;
+        position: relative;
+        left: 10vw;
+        bottom: 1.3vw;
+    }
+    /*.candidate-name:before {
+        transform: translate(10em, 13em);
+        transition: all 1s ease;
+    }*/
+    .personality {
+        grid-area: personality;
+        background-color: $pink-color;
+        justify-self: start;
+        align-self: end;
+        border: none;
+        font-size: 6vh;
+        /*position: relative;
+        left: 13vw;
+        top: 14vw;*/
+    }
+    /*.personality:before {
+        transform: translate(-2.5em, -2.5em);
+        transition: all 1s ease;
+    }*/
+    .values {
+        grid-area: values; 
+        background-color: $pink-color;
+        justify-self: start;
+        align-self: end;
+    }
+    .ambition {
+        grid-area: ambition;
+        background-color: $pink-color;
+        justify-self: end;
+        align-self: flex-start;
+    }
+    .hard-skills {
+        grid-area: hard-skills; 
+        background-color: $yellow-color;
+        justify-self: end;
+        align-self: end;
+    }
+    .strength {
+        grid-area: strength; 
+        background-color: $yellow-color;
+        justify-self: start;
         align-self: center;
     }
     .soft-skills {
@@ -55,47 +97,32 @@
         justify-self: start;
         align-self: start;
     }
-    .hard-skills {
-        grid-area: hard-skills; 
-        background-color: $yellow-color;
-        justify-self: end;
-        align-self: end;
-    }
-    .values {
-        grid-area: values; 
-        background-color: $violet-color;
-        color: whitesmoke;
-        justify-self: start;
-        align-self: end;
-    }
-    .ambition {
-        grid-area: ambition;
-        background-color: $violet-color;
-        color: whitesmoke;
-        justify-self: end;
-        align-self: flex-start;
-    }
     .projet {
         grid-area: projet; 
-        background-color: $pink-color;
+        background-color: $violet-color;
+        color: whitesmoke;
         justify-self: end;
         align-self: end;
     }
-    .personality {
-        grid-area: personality; 
+    .projetPdf{
+        grid-area: pPdf; 
         background-color: $violet-color;
         color: whitesmoke;
-        justify-self: center;
-        align-self: end;
-        border: none;
-        font-size: 6vh;
-
+        justify-self: end;
+        align-self: start;
     }
-    .strength {
-        grid-area: strength; 
-        background-color: $yellow-color;
+    .projetImg{
+        grid-area: pImg; 
+        background-color: $violet-color;
+        color: whitesmoke;
         justify-self: start;
-        align-self: center;
+        align-self: start;
+    }
+    .lastJob {
+        grid-area: lastJob; 
+        background-color: $green-color;
+        justify-self: start;
+        align-self: end;
     }
     .training {
         grid-area: training; 
@@ -109,29 +136,11 @@
         justify-self: end;
         align-self: start;
     }
-    .lastJob {
-        grid-area: lastJob; 
-        background-color: $green-color;
-        justify-self: start;
-        align-self: end;
-    }
     .diplome {
         grid-area: diplome; 
         background-color: $green-color;
         justify-self: end;
         align-self: center;
-    }
-    .projetPdf{
-        grid-area: pPdf; 
-        background-color: $pink-color;
-        justify-self: end;
-        align-self: start;
-    }
-    .projetImg{
-        grid-area: pImg; 
-        background-color: $pink-color;
-        justify-self: start;
-        align-self: start;
     }
     .bubble-text:hover {
         transform: scale(2);
@@ -178,6 +187,21 @@
 
 .btnWho{
     grid-area: A; 
+    background-color: $pink-color;
+    height: 17vmin;
+    width: 17vmin;
+    border-radius: 50%;
+    font-family: roboto;
+    font-weight: 700;
+    font-size: 1.5vw;
+    cursor: pointer;
+    border: none;
+    animation: pulsyP 2s infinite;
+    justify-self: end;
+    align-self: end;
+}
+.btnPop{
+    grid-area: B; 
     background-color: $violet-color;
     color: whitesmoke;
     height: 17vmin;
@@ -189,22 +213,6 @@
     cursor: pointer;
     border: none;
     animation: pulsy 2s infinite;
-    justify-self: end;
-    align-self: end;
-}
-.btnPop{
-    grid-area: B; 
-    background-color: $pink-color;
-    color: black;
-    height: 17vmin;
-    width: 17vmin;
-    border-radius: 50%;
-    font-family: roboto;
-    font-weight: 700;
-    font-size: 1.5vw;
-    cursor: pointer;
-    border: none;
-    animation: pulsyP 2s infinite;
     justify-self: start;
     align-self: end;
 }

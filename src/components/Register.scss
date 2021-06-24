@@ -47,6 +47,7 @@
                     position: absolute;
                     bottom: 2em;
                     transition: .25s ease;
+                    width: 13em;
                 }
                 input {
                     border: 0;
@@ -74,7 +75,7 @@
                 font: inherit;
                 font-size: 1.25em;
                 padding: 1em;
-                width: 5em;
+                width: 6em;
                 font-weight: 500;
                 background-color: $violet-color;
                 border-radius: 0.3em;
