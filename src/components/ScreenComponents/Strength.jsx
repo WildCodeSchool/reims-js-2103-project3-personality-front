@@ -4,9 +4,11 @@ import '../Screen.scss';
 function Strength() {
   return (
     <p className="bubble-text strength">
-      <span>
-        Forces
-      </span>
+      <label className="label">Vos forces :</label>
+      <input className="input" />
+      <input className="input" />
+      <input className="input" />
+      <input className="submit" type="submit" value="&#10146;" />
     </p>
   );
 }

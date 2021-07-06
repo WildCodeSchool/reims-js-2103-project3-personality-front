@@ -4,9 +4,11 @@ import '../Screen.scss';
 function Ambition() {
   return (
     <p className="bubble-text ambition">
-      <span>
-        Ambition
-      </span>
+      <label className="label">Vos ambitions :</label>
+      <input className="input" />
+      <input className="input" />
+      <input className="input" />
+      <input className="submit" type="submit" value="&#10146;" />
     </p>
   );
 }

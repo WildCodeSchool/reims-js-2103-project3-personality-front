@@ -4,9 +4,11 @@ import '../Screen.scss';
 function Softskills() {
   return (
     <p className="bubble-text soft-skills">
-      <span>
-        Soft skills
-      </span>
+      <label className="label">Vos softskills :</label>
+      <input className="input" />
+      <input className="input" />
+      <input className="input" />
+      <input className="submit" type="submit" value="&#10146;" />
     </p>
   );
 }
