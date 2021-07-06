@@ -8,7 +8,7 @@ function Personality() {
   return (
     <>
       <button type="button" className="button personality" onClick={() => setPlay(!play)}>
-        &#9654;
+        &#x25B8;
       </button>
       { play === true && (
         <>

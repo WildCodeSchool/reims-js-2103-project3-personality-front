@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Scrollspy from 'react-scrollspy';
 import Softskills from './ScreenComponents/Softskills';
 import Hardskills from './ScreenComponents/Hardskills';
 import Values from './ScreenComponents/Values';
@@ -12,8 +13,8 @@ import Diplome from './ScreenComponents/Diplome';
 import Strength from './ScreenComponents/Strength';
 import Personality from './ScreenComponents/Personality';
 import Training from './ScreenComponents/Training';
+import ProfileImage from './ScreenComponents/ProfileImage';
 import './Screen.scss';
-import scarlett from '../pictures/scarlett_johansson.jpeg';
 import Diapo from './ScreenComponents/Carousel';
 
 const allClosed = {
@@ -29,8 +30,16 @@ function Screen() {
   return (
     <>
       <div className="screen">
-        <div className="screen-container">
-          <img className="candidate-photo" src={scarlett} alt="scarlett" />
+
+        <section id="section-1" className="screen-container">
+
+          <Scrollspy className="scrollspy" items={['section-1', 'section-2', 'section-3']} currentClassName="is-current">
+            <li><a className="button-scroll" href="#section-1">&#x2B24;</a></li>
+            <li><a className="button-scroll" href="#section-2">&#x2B24;</a></li>
+            <li><a className="button-scroll" href="#section-3">&#x2B24;</a></li>
+          </Scrollspy>
+
+          <ProfileImage />
           <button href="b" className="btnWho" type="button" onClick={() => toggle('who')}>Qui suis-je ?</button>
           <button className="btnPop" type="button" onClick={() => toggle('pop')}>POP</button>
           <button className="btnStrength" type="button" onClick={() => toggle('strength')}>Mes Skills</button>
@@ -38,7 +47,12 @@ function Screen() {
 
           { isOpen.who === true && (
           <>
-            <p className="bubble-text-flat candidate-name tonfa">Scarlett Johansson</p>
+            <div className="bubble-text-flat candidate-name">
+              <label className="label">Votre nom et prénom :</label>
+              <input className="input" placeholder="Nom" />
+              <input className="input" placeholder="Prénom" />
+              <input className="submit" type="submit" value="&#10146;" />
+            </div>
             <Personality />
             <Values />
             <Ambition />
@@ -69,10 +83,15 @@ function Screen() {
             <Diplome />
           </>
           )}
+        </section>
 
-        </div>
+        <section id="section-2">
+          <Diapo />
+        </section>
+
+        <section id="section-3" />
+
       </div>
-      <Diapo />
     </>
   );
 }

@@ -1,20 +1,20 @@
 import React from 'react';
 import '../Screen.scss';
 
-function ProjectPdf() {
+function ProfileImage() {
   return (
-    <p className="bubble-text projetPdf">
+    <div className="profile-image">
       <label className="label">
         {' '}
-        PDF d&apos;un projet :
+        Votre photo :
       </label>
       <label className="label-file">
         Choisir un fichier
         <input type="file" className="input-file" />
       </label>
-      <input className="submit" type="submit" value="&#10146;" />
-    </p>
+      <input className="submit-invert" type="submit" value="&#10146;" />
+    </div>
   );
 }
 
-export default ProjectPdf;
+export default ProfileImage;
