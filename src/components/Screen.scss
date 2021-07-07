@@ -262,6 +262,7 @@
 .input {
     background-color: rgba(245, 245, 245, 0.473);
     width: 10vmin;
+    height: 5vmin; 
     border: 1px solid black;
 }
 
@@ -323,4 +324,10 @@ a {
     -webkit-text-stroke: 4px $violet-color;
     color: $violet-color;
     transition: all 0.3s;
+}
+.test{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
