@@ -1,6 +1,7 @@
 import React from 'react';
 import './Login.scss';
 import { useHistory } from 'react-router-dom';
+import PersonalityLogo from './PersonalityLogo';
 
 function Login() {
   const history = useHistory();
@@ -42,40 +43,45 @@ function Login() {
       });
   }
   return (
-    <div className="FormLogin">
-      <form onSubmit={submitForm}>
-        <fieldset>
-          <legend>Connexion</legend>
+    <>
+      <PersonalityLogo />
+      <div className="FormLoginContainer">
+        <div className="FormLogin">
+          <form onSubmit={submitForm}>
+            <fieldset>
+              <legend>Connexion</legend>
 
-          <div className="form-data">
-            <label htmlFor="email">Email</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              onChange={onChange}
-              value={login.email}
-              placeholder="johndoe@gmail.com"
-            />
-          </div>
+              <div className="form-data">
+                <label htmlFor="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  onChange={onChange}
+                  value={login.email}
+                  placeholder="johndoe@gmail.com"
+                />
+              </div>
 
-          <div className="form-data">
-            <label htmlFor="password">Mot de passe</label>
-            <input
-              type="password"
-              id="password"
-              name="password"
-              onChange={onChange}
-              value={login.password}
-              placeholder="********"
-            />
-          </div>
+              <div className="form-data">
+                <label htmlFor="password">Mot de passe</label>
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  onChange={onChange}
+                  value={login.password}
+                  placeholder="********"
+                />
+              </div>
 
-          <hr />
-          <input className="send-button" type="submit" value="Connexion" />
-        </fieldset>
-      </form>
-    </div>
+              <hr />
+              <input className="send-button" type="submit" value="Connexion" />
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </>
   );
 }
 

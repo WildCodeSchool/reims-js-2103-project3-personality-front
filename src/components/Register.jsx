@@ -46,88 +46,90 @@ function Register() {
   return (
     <>
       <PersonalityLogo />
-      <div className="FormUser">
-        <h1>Créons votre compte !</h1>
+      <div className="FormUserContainer">
+        <div className="FormUser">
+          <h1>Créons votre compte !</h1>
 
-        <form onSubmit={submitForm}>
-          <fieldset>
-            <legend>Vos informations</legend>
-            <div className="form-data">
-              <label htmlFor="name">Nom</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                onChange={onChange}
-                value={user.name}
-                placeholder="John Doe"
-              />
-            </div>
+          <form onSubmit={submitForm}>
+            <fieldset>
+              <legend>Vos informations</legend>
+              <div className="form-data">
+                <label htmlFor="name">Nom</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  onChange={onChange}
+                  value={user.name}
+                  placeholder="John Doe"
+                />
+              </div>
 
-            <div className="form-data">
-              <label htmlFor="username">Nom d&apos;utilisateur</label>
-              <input
-                type="text"
-                id="username"
-                name="username"
-                onChange={onChange}
-                value={user.username}
-                placeholder="johndoe"
-              />
-            </div>
+              <div className="form-data">
+                <label htmlFor="username">Nom d&apos;utilisateur</label>
+                <input
+                  type="text"
+                  id="username"
+                  name="username"
+                  onChange={onChange}
+                  value={user.username}
+                  placeholder="johndoe"
+                />
+              </div>
 
-            <div className="form-data">
-              <label htmlFor="email">Email</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                onChange={onChange}
-                value={user.email}
-                placeholder="johndoe@gmail.com"
-              />
-            </div>
+              <div className="form-data">
+                <label htmlFor="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  onChange={onChange}
+                  value={user.email}
+                  placeholder="johndoe@gmail.com"
+                />
+              </div>
 
-            <div className="form-data">
-              <label htmlFor="password">Mot de passe</label>
-              <input
-                type="password"
-                id="password"
-                name="password"
-                onChange={onChange}
-                value={user.password}
-                placeholder="********"
-              />
-            </div>
+              <div className="form-data">
+                <label htmlFor="password">Mot de passe</label>
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  onChange={onChange}
+                  value={user.password}
+                  placeholder="********"
+                />
+              </div>
 
-            <div className="form-data">
-              <label htmlFor="confirmPassword">Vérification du mot de passe</label>
-              <input
-                type="password"
-                id="confirmPassword"
-                name="confirmPassword"
-                onChange={onChange}
-                value={user.password}
-                placeholder="********"
-              />
-            </div>
+              <div className="form-data">
+                <label htmlFor="confirmPassword">Vérification du mot de passe</label>
+                <input
+                  type="password"
+                  id="confirmPassword"
+                  name="confirmPassword"
+                  onChange={onChange}
+                  value={user.password}
+                  placeholder="********"
+                />
+              </div>
 
-            <div className="form-data">
-              <label htmlFor="phone">Téléphone</label>
-              <input
-                type="text"
-                id="phone"
-                name="phone"
-                onChange={onChange}
-                value={user.phone}
-                placeholder="0612345678"
-              />
-            </div>
+              <div className="form-data">
+                <label htmlFor="phone">Téléphone</label>
+                <input
+                  type="text"
+                  id="phone"
+                  name="phone"
+                  onChange={onChange}
+                  value={user.phone}
+                  placeholder="0612345678"
+                />
+              </div>
 
-            <hr />
-            <input className="send-button" type="submit" value="Envoyer !" />
-          </fieldset>
-        </form>
+              <hr />
+              <input className="send-button" type="submit" value="Envoyer !" />
+            </fieldset>
+          </form>
+        </div>
       </div>
     </>
   );
