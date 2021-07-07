@@ -1,89 +1,89 @@
 @import 'variables.scss';
 
-.personality-logo {
-    height: 8vmin;
-    margin: 0 2vmin;
-    position: absolute;
-}
-
-.FormUser {	
-    margin: 2em auto;
-	display: flex;
-	flex-direction: column;
+.FormUserContainer {
+    display: flex;
+    justify-content: center;
     align-items: center;
-    min-width: calc(500px - 2 * 2em);
-    min-height: calc(500px - 2 * 2em);
-    width: 70vmin;
-    height: 70vmin;
-	background-color: rgba(255, 255, 255, 0.7);
-	border-radius: 50%;
-	box-shadow: 1em 1em 2em 0 hsla(0, 0, 0, 0.3);;
-	padding: 2em;
-    h1 {
-        color: $violet-color;
-    }
-    form {
-        padding: 2em 1em 0;
-        fieldset {
-            border: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            legend {
-                color: $violet-color;
-                font-size: 1.3em;
-                font-weight: 600;
-            }
-            div {
+    .FormUser {
+        margin: 2em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-width: calc(500px - 2 * 2em);
+        min-height: calc(500px - 2 * 2em);
+        width: 70vmin;
+        height: 70vmin;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 50%;
+        box-shadow: 1em 1em 2em 0 hsla(0, 0, 0, 0.3);;
+        padding: 2em;
+        h1 {
+            color: $violet-color;
+        }
+        form {
+            padding: 2em 1em 0;
+            fieldset {
+                border: 0;
                 display: flex;
-                flex-direction: column-reverse;
-                position: relative;
-                padding-top: 1.5em;
-                &+.input {
-                    margin-top: 1.5em;
-                }
-                label {
+                flex-direction: column;
+                align-items: center;
+                legend {
                     color: $violet-color;
-                    position: absolute;
-                    bottom: 2em;
-                    transition: .25s ease;
-                    width: 13em;
+                    font-size: 1.3em;
+                    font-weight: 600;
                 }
-                input {
-                    border: 0;
-                    z-index: 1;
-                    background-color: transparent;
-                    border-bottom: 2px solid white; 
-                    font: inherit;
-                    font-size: 1.125em;
-                    padding: .25em 0;
-                    color: $pink-color;
-                    &:focus, &:valid {
-                        outline: 0;
-                        border-bottom-color: $violet-color;
-                        &+.input-label {
-                            color: $violet-color;
-                            transform: translateY(-1.5em);
+                div {
+                    display: flex;
+                    flex-direction: column-reverse;
+                    position: relative;
+                    padding-top: 1.5em;
+                    &+.input {
+                        margin-top: 1.5em;
+                    }
+                    label {
+                        color: $violet-color;
+                        position: absolute;
+                        bottom: 2em;
+                        transition: .25s ease;
+                        width: 13em;
+                    }
+                    input {
+                        border: 0;
+                        z-index: 1;
+                        background-color: transparent;
+                        border-bottom: 2px solid white; 
+                        font: inherit;
+                        font-size: 1.125em;
+                        padding: .25em 0;
+                        color: $pink-color;
+                        &:focus, &:valid {
+                            outline: 0;
+                            border-bottom-color: $violet-color;
+                            &+.input-label {
+                                color: $violet-color;
+                                transform: translateY(-1.5em);
+                            }
                         }
                     }
                 }
-            }
-            .send-button {
-                display: flex;
-                justify-content: center;
-                margin-top: 1.5em;
-                font: inherit;
-                font-size: 1.25em;
-                padding: 1em;
-                width: 6em;
-                font-weight: 500;
-                background-color: $violet-color;
-                border-radius: 0.3em;
-                color: whitesmoke;
-                border: 0;
-                cursor: pointer;
-                &:focus {
-                    outline: 0;
+                .send-button {
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 1.5em;
+                    font: inherit;
+                    font-size: 1.25em;
+                    padding: 1em;
+                    width: 6em;
+                    font-weight: 500;
+                    background-color: $violet-color;
+                    border-radius: 0.3em;
+                    color: whitesmoke;
+                    border: 0;
+                    cursor: pointer;
+                    &:focus {
+                        outline: 0;
+                    }
                 }
             }
         }

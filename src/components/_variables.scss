@@ -10,12 +10,17 @@ $pink-color: hsla(331,82%,59%, 1);
 body {
     margin: 0;
     padding: 0;
-    //background-image: url("../pictures/BG.jpg");
     background-size: contain;
     background-position: 0;
     height: 100vmin;
     font-family: $sans-serif-font;
 }
+
+.personality-logo {
+        height: 8vmin;
+        margin: 2vmin;
+        position: absolute;
+    }
 
 @keyframes pulsy {
     0% {
