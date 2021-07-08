@@ -40,7 +40,7 @@ function ProfileImage() {
       </label>
       <p>
         Filename:
-        {selectedFile.name}
+        {selectedFile}
       </p>
       <button type="submit" className="submit-invert" onClick={handleSubmission}>&#10146;</button>
     </div>
