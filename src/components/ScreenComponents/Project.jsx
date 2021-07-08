@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import ImputComponents from '../ImputComponents.jsx/ImputConditional';
+import ImputComponents from '../ImputComponents/ImputConditional';
 import '../Screen.scss';
 
 function Project() {
