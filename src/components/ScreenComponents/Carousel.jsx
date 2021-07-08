@@ -11,7 +11,10 @@ function Diapo() {
     <img className="circular-images" src="https://picsum.photos/800/304/?random" alt="5" />];
 
   return (
-    <Carousel className="carousel" slides={slides} autoplay interval={3000} />
+    <div className="carousel-container">
+      <p>Mes images favorites :</p>
+      <Carousel className="carousel" slides={slides} autoplay interval={3000} />
+    </div>
   );
 }
 

@@ -16,7 +16,9 @@ import Training from './ScreenComponents/Training';
 import ProfileImage from './ScreenComponents/ProfileImage';
 import './Screen.scss';
 import Diapo from './ScreenComponents/Carousel';
+import Recommandations from './ScreenComponents/Recommandations';
 import PersonalityLogo from './PersonalityLogo';
+import scrollDown from '../pictures/scroll-down.png';
 
 const allClosed = {
   who: false, strength: false, what: false, pop: false,
@@ -82,13 +84,18 @@ function Screen() {
             <Diplome />
           </>
         )}
+
+        <img className="scroll-down" src={scrollDown} alt="scroll-down" />
+
       </section>
 
       <section id="section-2">
         <Diapo />
       </section>
 
-      <section id="section-3" />
+      <section id="section-3">
+        <Recommandations />
+      </section>
 
     </div>
   );

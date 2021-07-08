@@ -1,11 +1,27 @@
 @import '../variables.scss';
 
+.carousel-container {
+  display: flex;
+  flex-direction: column;
+  margin: 7em;
+  p {
+    align-self: center;
+    font-weight: 600;
+    color: $violet-color
+  }
+}
+
 .carousel {
-    height: 2000px;
+    //height: 10em;
+    margin: 5em;
 }
 
 .circular-images {
     clip-path: circle(25%);
+}
+
+.react-3d-carousel {
+  height: 500px;
 }
 
 $time: 500ms;

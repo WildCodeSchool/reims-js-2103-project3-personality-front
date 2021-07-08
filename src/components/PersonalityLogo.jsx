@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import personnalityLogo from '../pictures/Logo_Personnality_Original.png';
+import personnalityLogo from '../pictures/hippotam-logo.png';
 
 function PersonalityLogo() {
   return (

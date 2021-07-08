@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import Logo from '../pictures/Logo_Personnality_Original.png';
+import Logo from '../pictures/hippotam-logo.png';
 import './home.scss';
 
 function Home() {
