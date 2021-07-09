@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import Scrollspy from 'react-scrollspy';
 import Softskills from './ScreenComponents/Softskills';
 import Hardskills from './ScreenComponents/Hardskills';
@@ -26,9 +27,20 @@ const allClosed = {
 
 function Screen() {
   const [isOpen, setOpen] = useState(allClosed);
+  const [name, setName] = useState();
   const toggle = (keyToOpen) => {
     setOpen({ ...allClosed, [keyToOpen]: !isOpen[keyToOpen] });
   };
+
+  const { id } = useParams();
+
+  useEffect(() => {
+    fetch(`http://localhost:5000/users/${id}`)
+      .then((response) => response.json())
+      .then((res) => {
+        setName(res.name);
+      });
+  }, []);
 
   return (
     <div className="screen">
@@ -49,10 +61,7 @@ function Screen() {
         { isOpen.who === true && (
           <>
             <div className="bubble-text-flat candidate-name">
-              <label className="label">Votre nom et prénom :</label>
-              <input className="input" placeholder="Nom" />
-              <input className="input" placeholder="Prénom" />
-              <input className="submit" type="submit" value="&#10146;" />
+              <p>{name}</p>
             </div>
             <Personality />
             <Values />

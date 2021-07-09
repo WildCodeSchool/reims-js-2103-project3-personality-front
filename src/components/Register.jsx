@@ -8,7 +8,7 @@ function Register() {
     username: '',
     email: '',
     password: '',
-    phone: '',
+    telephone: '',
   });
   function onChange(event) {
     setUser({
@@ -114,13 +114,13 @@ function Register() {
               </div>
 
               <div className="form-data">
-                <label htmlFor="phone">Téléphone</label>
+                <label htmlFor="telephone">Téléphone</label>
                 <input
                   type="text"
-                  id="phone"
-                  name="phone"
+                  id="telephone"
+                  name="telephone"
                   onChange={onChange}
-                  value={user.phone}
+                  value={user.telephone}
                   placeholder="0612345678"
                 />
               </div>

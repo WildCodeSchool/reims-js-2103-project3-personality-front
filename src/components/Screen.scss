@@ -214,6 +214,7 @@
 .input {
     background-color: rgba(245, 245, 245, 0.473);
     width: 10vmin;
+    height: 5vmin; 
     border: 1px solid black;
 }
 
@@ -285,4 +286,11 @@ a {
     animation: all 1s ease;
     -webkit-animation: bounce-top 3s ease-in-out 0.00001s infinite alternate-reverse ;
     animation: bounce-top 3s ease-in-out 0.00001s infinite alternate-reverse ;
+}
+
+.test{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

@@ -1,6 +1,8 @@
 import React from 'react';
 import './Login.scss';
-import { useHistory } from 'react-router-dom';
+import { Redirect, useHistory } from 'react-router-dom';
+import { useLoginData } from '../contexts/LoginDataContext';
+
 import PersonalityLogo from './PersonalityLogo';
 
 function Login() {
@@ -9,6 +11,12 @@ function Login() {
     email: '',
     password: '',
   });
+
+  const { loginData, setLoginData } = useLoginData();
+
+  if (loginData != null) {
+    return <Redirect to={`/screen/${loginData.userId}`} />;
+  }
 
   function onChange(event) {
     setLogin({
@@ -30,16 +38,16 @@ function Login() {
     fetch(url, config)
       .then((res) => res.json())
       .then((res) => {
-        console.log(res);
         if (res.error) {
           alert(res.error);
         } else {
           alert('Connexion réussi');
+          setLoginData(res);
+          history.push(`/screen/${res.userId}`);
         }
       })
       .catch((e) => {
         console.error(e);
-        history.push('/screen');
       });
   }
   return (

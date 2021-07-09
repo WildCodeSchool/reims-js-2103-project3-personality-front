@@ -6,6 +6,7 @@ import Screen from './components/Screen';
 import NotFound from './components/NotFound';
 import Register from './components/Register';
 import ScreenContext from './contexts/ScreenContext';
+import { LoginDataProvider } from './contexts/LoginDataContext';
 import Login from './components/Login';
 
 import './Particles.css';
@@ -14,7 +15,7 @@ function App() {
   const [play, setPlay] = React.useState(false);
 
   return (
-    <>
+    <LoginDataProvider>
       <Particles
         id="tsparticles"
         options={{
@@ -167,13 +168,13 @@ function App() {
           <Switch>
             <Route path="/" exact component={Home} />
             <Route path="/login" exact component={Login} />
-            <Route path="/screen" exact component={Screen} />
+            <Route path="/screen/:id" exact component={Screen} />
             <Route path="/register" exact component={Register} />
             <Route component={NotFound} />
           </Switch>
         </BrowserRouter>
       </ScreenContext.Provider>
-    </>
+    </LoginDataProvider>
   );
 }
 
