@@ -7,6 +7,7 @@ function Personality() {
   const { play, setPlay } = useContext(ScreenContext);
   return (
     <>
+      <p>Mes recommandations :</p>
       <button type="button" className="button personality" onClick={() => setPlay(!play)}>
         &#x25B8;
       </button>
