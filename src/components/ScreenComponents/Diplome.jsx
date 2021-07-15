@@ -1,5 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import arrowRight from '../../pictures/arrowRight.png';
 import ImputComponents from '../ImputComponents/ImputConditional';
 import '../Screen.scss';
 
@@ -42,10 +43,14 @@ function Diplome() {
   }
   return (
     <p className="bubble-text diplome">
-      <form className="test" onSubmit={submitForm}>
-        <label className="label">Vos diplome :</label>
+      <form className="form" onSubmit={submitForm}>
+        <label className="label">
+          Mon diplôme
+          <br />
+          le plus élevé :
+        </label>
         <ImputComponents type="text" name="d1" onChange={onChange} value={diplome.d1} />
-        <input className="submit" type="submit" value="&#10146;" />
+        <button type="submit" className="submit"><img className="arrow-right" src={arrowRight} alt="arrow-right" /></button>
       </form>
     </p>
   );

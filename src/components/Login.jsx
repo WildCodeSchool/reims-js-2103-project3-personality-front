@@ -41,7 +41,7 @@ function Login() {
         if (res.error) {
           alert(res.error);
         } else {
-          alert('Connexion réussi');
+          alert('Connexion réussie !');
           setLoginData(res);
           history.push(`/screen/${res.userId}`);
         }

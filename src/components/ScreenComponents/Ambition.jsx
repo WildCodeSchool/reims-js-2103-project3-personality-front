@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import ImputComponents from '../ImputComponents/ImputConditional';
+import arrowRight from '../../pictures/arrowRight.png';
 import '../Screen.scss';
 
 function Ambition() {
@@ -44,12 +45,12 @@ function Ambition() {
   }
   return (
     <p className="bubble-text ambition">
-      <form className="test" onSubmit={submitForm}>
-        <label className="label">Vos ambition :</label>
+      <form className="form" onSubmit={submitForm}>
+        <label className="label">Mes ambitions :</label>
         <ImputComponents type="text" name="a1" onChange={onChange} value={ambition.a1} />
         <ImputComponents type="text" name="a2" onChange={onChange} value={ambition.a2} />
         <ImputComponents type="text" name="a3" onchange={onChange} value={ambition.a3} />
-        <input className="submit" type="submit" value="&#10146;" />
+        <button type="submit" className="submit"><img className="arrow-right" src={arrowRight} alt="arrow-right" /></button>
       </form>
     </p>
   );
