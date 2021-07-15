@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import ImputComponents from '../ImputComponents/ImputConditional';
+import arrowRight from '../../pictures/arrowRight.png';
 import '../Screen.scss';
 
 function Softskills() {
@@ -44,12 +45,12 @@ function Softskills() {
   }
   return (
     <p className="bubble-text soft-skills">
-      <form className="test" onSubmit={submitForm}>
-        <label className="label">Vos softskills :</label>
+      <form className="form" onSubmit={submitForm}>
+        <label className="label">Mes softskills :</label>
         <ImputComponents type="text" name="sk1" onChange={onChange} value={softskills.sk1} />
         <ImputComponents type="text" name="sk2" onChange={onChange} value={softskills.sk2} />
         <ImputComponents type="text" name="sk3" onchange={onChange} value={softskills.sk3} />
-        <input className="submit" type="submit" value="&#10146;" />
+        <button type="submit" className="submit"><img className="arrow-right" src={arrowRight} alt="arrow-right" /></button>
       </form>
     </p>
   );

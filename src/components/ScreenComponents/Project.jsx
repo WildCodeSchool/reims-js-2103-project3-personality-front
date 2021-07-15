@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import ImputComponents from '../ImputComponents/ImputConditional';
+import arrowRight from '../../pictures/arrowRight.png';
 import '../Screen.scss';
 
 function Project() {
@@ -44,12 +45,12 @@ function Project() {
   }
   return (
     <p className="bubble-text projet">
-      <form className="test" onSubmit={submitForm}>
-        <label className="label">Vos projet :</label>
+      <form className="form" onSubmit={submitForm}>
+        <label className="label">Mes projets :</label>
         <ImputComponents type="url" name="p1" onChange={onChange} value={projet.p1} />
         <ImputComponents type="url" name="p2" onChange={onChange} value={projet.p2} />
         <ImputComponents type="url" name="p3" onchange={onChange} value={projet.p3} />
-        <input className="submit" type="submit" value="&#10146;" />
+        <button type="submit" className="submit"><img className="arrow-right" src={arrowRight} alt="arrow-right" /></button>
       </form>
     </p>
   );

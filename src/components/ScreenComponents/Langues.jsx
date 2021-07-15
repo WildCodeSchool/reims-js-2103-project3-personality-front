@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import ImputComponents from '../ImputComponents/ImputConditional';
+import arrowRight from '../../pictures/arrowRight.png';
 import '../Screen.scss';
 
 function Langues() {
@@ -44,12 +45,15 @@ function Langues() {
   }
   return (
     <p className="bubble-text langues">
-      <form className="test" onSubmit={submitForm}>
-        <label className="label">Vos langues :</label>
+      <form className="form" onSubmit={submitForm}>
+        <label className="label">
+          Mes
+          <br />
+          langues parlées :
+        </label>
         <ImputComponents type="text" name="l1" onChange={onChange} value={langues.l1} />
         <ImputComponents type="text" name="l2" onChange={onChange} value={langues.l2} />
-        <ImputComponents type="text" name="l3" onchange={onChange} value={langues.l3} />
-        <input className="submit" type="submit" value="&#10146;" />
+        <button type="submit" className="submit"><img className="arrow-right" src={arrowRight} alt="arrow-right" /></button>
       </form>
     </p>
   );

@@ -1,46 +1,46 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import HoverVideoPlayer from 'react-hover-video-player';
-import ScreenContext from '../../contexts/ScreenContext';
+import PropTypes from 'prop-types';
+import ReactPlayer from 'react-player';
 import Modal from './Modal';
-import valdPic from '../../pictures/vald_pic.png';
-import valdClip from '../../pictures/vald_clip.mp4';
 import './VideoButton.scss';
 
-function VideoButton() {
-  const { play, setPlay } = useContext(ScreenContext);
+function VideoButton({ videoSrc, imgSrc, recoVideo }) {
   return (
-    <>
-      <button
-        className="preview-player"
-        type="button"
-        onClick={() => setPlay(!play)}
-      >
+    <Modal
+      buttonClassName="preview-player"
+      buttonContent={(
         <HoverVideoPlayer
-          videoSrc={valdClip}
+          videoSrc={videoSrc}
+          volume={0.5}
+          muted={false}
           pausedOverlay={(
             <img
-              src={valdPic}
+              src={imgSrc}
               alt=""
               style={{
-              // Make the image expand to cover the video's dimensions
+                // Make the image expand to cover the video's dimensions
                 width: '100%',
                 height: '100%',
                 objectFit: 'cover',
               }}
             />
-        )}
+      )}
           loadingOverlay={
             <div className="loading-spinner-overlay" />
-        }
+      }
         />
-      </button>
-      { play === true && (
-        <>
-          <Modal />
-        </>
-      )}
-    </>
+    )}
+    >
+      <ReactPlayer className="player" url={recoVideo} playing volume="0.5" />
+    </Modal>
   );
 }
+
+VideoButton.propTypes = {
+  videoSrc: PropTypes.string.isRequired,
+  imgSrc: PropTypes.string.isRequired,
+  recoVideo: PropTypes.string.isRequired,
+};
 
 export default VideoButton;
