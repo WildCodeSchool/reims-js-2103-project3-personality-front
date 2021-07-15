@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useLoginData } from '../../contexts/LoginDataContext';
 import ImputComponents from '../ImputComponents/ImputConditional';
+import arrowRight from '../../pictures/arrowRight.png';
 import '../Screen.scss';
 
 function LastJob() {
@@ -56,9 +57,13 @@ function LastJob() {
   return (
     <p className="bubble-text lastJob">
       <form className="test" onSubmit={submitForm}>
-        <label className="label">Votre dernier emploi :</label>
+        <label className="label">
+          Mon dernier
+          <br />
+          emploi :
+        </label>
         <ImputComponents type="text" name="lj1" onChange={onChange} value={lastJob.lj1} />
-        <input className="submit" type="submit" value="&#10146;" />
+        <button type="submit" className="submit"><img className="arrow-right" src={arrowRight} alt="arrow-right" /></button>
       </form>
     </p>
   );

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import ImputFiles from '../ImputComponents/ImputFiles';
+import arrowRight from '../../pictures/arrowRight.png';
 import '../Screen.scss';
 
 function ProjectImg() {
@@ -40,11 +41,11 @@ function ProjectImg() {
         Choisir un fichier
         <ImputFiles name="File" onChange={changeHandler} />
       </label>
-      <p>
+      {/* <p>
         Filename:
         {selectedFile}
-      </p>
-      <button type="submit" className="submit-invert" onClick={handleSubmission}>&#10146;</button>
+      </p> */}
+      <button type="submit" className="submit" onClick={handleSubmission}><img className="arrow-right" src={arrowRight} alt="arrow-right" /></button>
     </p>
   );
 }

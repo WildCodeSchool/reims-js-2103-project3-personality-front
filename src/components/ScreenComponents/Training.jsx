@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useLoginData } from '../../contexts/LoginDataContext';
 import ImputComponents from '../ImputComponents/ImputConditional';
+import arrowRight from '../../pictures/arrowRight.png';
 import '../Screen.scss';
 
 function Training() {
@@ -55,10 +56,14 @@ function Training() {
   }
   return (
     <p className="bubble-text training">
-      <form className="test" onSubmit={submitForm}>
-        <label className="label">Votre dernière formation :</label>
+      <form className="form" onSubmit={submitForm}>
+        <label className="label">
+          Ma dernière
+          <br />
+          formation :
+        </label>
         <ImputComponents type="text" name="t1" onChange={onChange} value={training.t1} />
-        <input className="submit" type="submit" value="&#10146;" />
+        <button type="submit" className="submit"><img className="arrow-right" src={arrowRight} alt="arrow-right" /></button>
       </form>
     </p>
   );

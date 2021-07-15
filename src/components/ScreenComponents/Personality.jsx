@@ -1,22 +1,22 @@
-import React, { useContext } from 'react';
-import ScreenContext from '../../contexts/ScreenContext';
+import React from 'react';
+import ReactPlayer from 'react-player';
+import playSymbol from '../../pictures/playSymbol.png';
 import '../Screen.scss';
 import Modal from './Modal';
 
 function Personality() {
-  const { play, setPlay } = useContext(ScreenContext);
   return (
-    <>
-      <p>Mes recommandations :</p>
-      <button type="button" className="button personality" onClick={() => setPlay(!play)}>
-        &#x25B8;
-      </button>
-      { play === true && (
+    <Modal
+      buttonClassName="personality-button"
+      buttonContent={(
         <>
-          <Modal />
+          Ma présentation :
+          <img className="play-symbol" src={playSymbol} alt="arrow-right" />
         </>
-      )}
-    </>
+    )}
+    >
+      <ReactPlayer className="player" url="https://www.youtube.com/watch?v=UF7ES0xwVvM&t=2s&ab_channel=CelineFrenchMedium" playing volume="0.5" />
+    </Modal>
   );
 }
 

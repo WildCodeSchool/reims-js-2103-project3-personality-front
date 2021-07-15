@@ -6,12 +6,46 @@
     align-items: center;
     margin-top: 15em;
     p {
+        font-size: 1.5em;
         font-weight: 600;
         color: $violet-color
     }
 }
 
 .video-button-container {
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 100%;
+    gap: 0px 0px;
+    grid-template-areas:
+      "reco1 reco2 reco3"
+      ;
+    .reco1 {
+        grid-area: reco1;
+    }
+    .reco2 {
+        grid-area: reco2;
+    }
+    .reco3 {
+        grid-area: reco3;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .recoImg3 {
+            width: 9em;
+            clip-path: circle(40%);
+        }
+        h2 {
+            color: black;
+            font-weight: 600;
+            font-size: 1em;
+            width: 15em;
+        }
+        p {
+            color: black;
+            font-weight: 400;
+            font-size: 1em;
+            width: 15em;
+        }    
+    }
 }

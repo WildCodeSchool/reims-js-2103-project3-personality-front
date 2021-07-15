@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useLoginData } from '../../contexts/LoginDataContext';
 import ImputFiles from '../ImputComponents/ImputFiles';
+import arrowRight from '../../pictures/arrowRight.png';
 import '../Screen.scss';
 
 function ProfileImage() {
@@ -45,15 +46,14 @@ function ProfileImage() {
   };
   return (
     <div className="profile-image">
-      <label className="label">
-        {' '}
-        Votre photo :
+      <label className="label-shadow">
+        Ma photo :
       </label>
       <label className="label-file">
         Choisir un fichier
         <ImputFiles name="File" onChange={changeHandler} />
       </label>
-      <button type="submit" className="submit-invert" onClick={handleSubmission} src={photo} alt="">&#10146;</button>
+      <button type="submit" className="submit" onClick={handleSubmission}><img className="arrow-right" src={arrowRight} alt="arrow-right" /></button>
     </div>
   );
 }
