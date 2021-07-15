@@ -44,7 +44,8 @@ function Project() {
       });
   }
   return (
-    <p className="bubble-text projet">
+    <p className="bubble-text project">
+      <span className="help-text-left">Entrez les URL de vos projets perso</span>
       <form className="form" onSubmit={submitForm}>
         <label className="label">Mes projets :</label>
         <ImputComponents type="url" name="p1" onChange={onChange} value={projet.p1} />

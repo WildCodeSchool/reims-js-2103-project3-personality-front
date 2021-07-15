@@ -31,6 +31,7 @@ function ProfileImage() {
   };
   return (
     <div className="profile-image">
+      <span className="help-text-bottom-profile">Uploadez votre plus belle photo</span>
       <label className="label-shadow">
         Ma photo :
       </label>
@@ -38,10 +39,6 @@ function ProfileImage() {
         Choisir un fichier
         <ImputFiles name="File" onChange={changeHandler} />
       </label>
-      {/* <p>
-        Filename:
-        {selectedFile}
-      </p> */}
       <button type="submit" className="submit" onClick={handleSubmission}><img className="arrow-right" src={arrowRight} alt="arrow-right" /></button>
     </div>
   );
