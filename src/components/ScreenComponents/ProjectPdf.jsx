@@ -1,8 +1,10 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 import ImputFiles from '../ImputComponents/ImputFiles';
 import '../Screen.scss';
 
 function ProjectPdf() {
+  const { id } = useParams();
   const [selectedFile, setSelectedFile] = React.useState();
 
   const changeHandler = (event) => {
@@ -14,7 +16,7 @@ function ProjectPdf() {
     formData.append('File', selectedFile);
 
     fetch(
-      'http://localhost:5000/upload',
+      `http://localhost:5000/screen/${id}/pop`,
       {
         method: 'POST',
         body: formData,

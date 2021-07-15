@@ -4,11 +4,11 @@ import './Carousel.scss';
 
 function Diapo() {
   const slides = [
-    <img className="circular-images" src="https://picsum.photos/800/300/?random" alt="1" />,
-    <img className="circular-images" src="https://picsum.photos/800/301/?random" alt="2" />,
-    <img className="circular-images" src="https://picsum.photos/800/302/?random" alt="3" />,
-    <img className="circular-images" src="https://picsum.photos/800/303/?random" alt="4" />,
-    <img className="circular-images" src="https://picsum.photos/800/304/?random" alt="5" />];
+    <img className="circular-images" src="" alt="1" />,
+    <img className="circular-images" src="" alt="2" />,
+    <img className="circular-images" src="" alt="3" />,
+    <img className="circular-images" src="" alt="4" />,
+    <img className="circular-images" src="" alt="5" />];
 
   return (
     <div className="carousel-container">
