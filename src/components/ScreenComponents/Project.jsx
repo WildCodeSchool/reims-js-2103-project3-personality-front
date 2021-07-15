@@ -28,7 +28,7 @@ function Project() {
       },
       body: JSON.stringify(projet),
     };
-    const url = `http://localhost:5000/screen/${id}/projet`;
+    const url = `http://localhost:5000/screen/${id}/pop`;
     fetch(url, config)
       .then((res) => res.json())
       .then((res) => {

@@ -16,7 +16,7 @@
     "react-scripts": "4.0.3",
     "react-scrollspy": "^3.4.3",
     "react-transition-group": "^4.4.2",
-    "react-tsparticles": "^1.29.2",
+    "react-tsparticles": "^1.30.4",
     "redux": "^4.1.0",
     "sass": "^1.34.0",
     "video-react": "^0.14.1",

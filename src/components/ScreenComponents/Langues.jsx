@@ -1,16 +1,25 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import { useLoginData } from '../../contexts/LoginDataContext';
 import ImputComponents from '../ImputComponents/ImputConditional';
 import arrowRight from '../../pictures/arrowRight.png';
 import '../Screen.scss';
 
 function Langues() {
   const { id } = useParams();
+  const { loginData } = useLoginData();
   const [langues, setLangues] = React.useState({
     l1: '',
     l2: '',
-    l3: '',
   });
+  React.useEffect(() => {
+    fetch(`http://localhost:5000/screen/${id}/langues`)
+      .then((response) => response.json())
+      .then((res) => {
+        setLangues(res.reduce((acc, langue) => ({ ...acc, [`l${langue.number}`]: langue.langueName }), {}));
+        console.log(res);
+      });
+  }, []);
 
   function onChange(event) {
     setLangues({
@@ -25,23 +34,26 @@ function Langues() {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        Authorization: `Bearer ${loginData.token}`,
       },
-      body: JSON.stringify(langues),
     };
     const url = `http://localhost:5000/screen/${id}/langues`;
-    fetch(url, config)
-      .then((res) => res.json())
-      .then((res) => {
-        console.log(res);
-        if (res.error) {
-          alert(res.error);
-        } else {
-          console.log('succès');
-        }
-      })
-      .catch((e) => {
-        console.error(e);
-      });
+    for (let i = 1; i <= 2; i += 1) {
+      config.body = JSON.stringify({ langueName: langues[`l${i}`], number: i });
+      fetch(url, config)
+        .then((res) => res.json())
+        .then((res) => {
+          console.log(res);
+          if (res.error) {
+            alert(res.error);
+          } else {
+            console.log('succès');
+          }
+        })
+        .catch((e) => {
+          console.error(e);
+        });
+    }
   }
   return (
     <p className="bubble-text langues">
