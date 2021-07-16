@@ -11,13 +11,13 @@ function ImputFiles({
   const { loginData } = useLoginData();
   return (
     <>
-      {loginData?.userId === parseInt(id, 10) ? <input className="input-file" type="file" name={name} onChange={onChange} /> : <img src={src} alt={alt} />}
+      {loginData?.userId === parseInt(id, 10) ? <input className="input-file" type="file" name={name} onChange={onChange} /> : <img src={`http://localhost:5000/uploads/${src}`} alt={alt} />}
     </>
   );
 }
 ImputFiles.propTypes = {
   onChange: PropTypes.func.isRequired,
-  src: PropTypes.element.isRequired,
+  src: PropTypes.string.isRequired,
   alt: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
 };

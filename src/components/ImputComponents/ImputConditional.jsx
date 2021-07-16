@@ -11,7 +11,7 @@ function ImputComponents({
   const { loginData } = useLoginData();
   return (
     <>
-      {loginData?.userId === parseInt(id, 10) ? <input className="input" type={type} name={name} onChange={onChange} value={value} /> : <p>{value}</p>}
+      {loginData?.userId === parseInt(id, 10) ? <input className="input" type={type} name={name} onChange={onChange} value={value} /> : <p className="paragraphe">{value}</p>}
     </>
   );
 }
