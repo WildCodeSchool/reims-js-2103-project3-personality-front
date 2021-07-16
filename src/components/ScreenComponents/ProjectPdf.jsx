@@ -34,6 +34,7 @@ function ProjectPdf() {
 
   return (
     <p className="bubble-text projetPdf">
+      <span className="help-text-bottom">Uploadez un PDF d&apos;un projet perso</span>
       <label className="label">
         {' '}
         PDF d&apos;un projet :

@@ -46,6 +46,7 @@ function ProfileImage() {
   };
   return (
     <div className="profile-image">
+      <span className="help-text-bottom-profile">Uploadez votre plus belle photo</span>
       <label className="label-shadow">
         Ma photo :
       </label>

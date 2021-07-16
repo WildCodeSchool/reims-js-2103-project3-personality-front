@@ -58,6 +58,7 @@ function Strength() {
   }
   return (
     <p className="bubble-text strength">
+      <span className="help-text-top">Quelles sont vos plus grandes forces ?</span>
       <form className="form" onSubmit={submitForm}>
         <label className="label">Mes forces :</label>
         <ImputComponents type="text" name="s1" onChange={onChange} value={strength.s1} />

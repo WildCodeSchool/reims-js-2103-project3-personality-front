@@ -58,6 +58,7 @@ function Hardskills() {
   }
   return (
     <p className="bubble-text hard-skills">
+      <span className="help-text-top">Listez vos principales hardskills</span>
       <form className="form" onSubmit={submitForm}>
         <label className="label">Mes hardskills :</label>
         <ImputComponents type="text" name="hk1" onChange={onChange} value={hardskills.hk1} />

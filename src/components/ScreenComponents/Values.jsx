@@ -58,6 +58,7 @@ function Values() {
   }
   return (
     <p className="bubble-text values">
+      <span className="help-text-right">Renseignez les valeurs qui vous sont chères</span>
       <form className="form" onSubmit={submitForm}>
         <label className="label">Mes valeurs :</label>
         <ImputComponents type="text" name="v1" onChange={onChange} value={value.v1} />

@@ -54,8 +54,8 @@ function Screen() {
 
         <ProfileImage />
         <button href="b" className="btnWho" type="button" onClick={() => toggle('who')}>Qui suis-je ?</button>
-        <button className="btnPop" type="button" onClick={() => toggle('pop')}>POP</button>
-        <button className="btnStrength" type="button" onClick={() => toggle('strength')}>Mes Skills</button>
+        <button className="btnPop" type="button" onClick={() => toggle('pop')}>Mes projets</button>
+        <button className="btnStrength" type="button" onClick={() => toggle('strength')}>Mes skills</button>
         <button className="btnWhat" type="button" onClick={() => toggle('what')}>What else ?</button>
 
         { isOpen.who === true && (
