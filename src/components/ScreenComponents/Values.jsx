@@ -8,7 +8,7 @@ import '../Screen.scss';
 function Values() {
   const { id } = useParams();
   const { loginData } = useLoginData();
-  const [values, setValues] = React.useState({
+  const [value, setValue] = React.useState({
     v1: '',
     v2: '',
     v3: '',
@@ -17,14 +17,14 @@ function Values() {
     fetch(`http://localhost:5000/screen/${id}/values`)
       .then((response) => response.json())
       .then((res) => {
-        setValues(res.reduce((acc, value) => ({ ...acc, [`v${value.number}`]: value.valueName }), {}));
+        setValue(res.reduce((acc, values) => ({ ...acc, [`v${values.number}`]: values.valueName }), {}));
         console.log(res);
       });
   }, []);
 
   function onChange(event) {
-    setValues({
-      ...values,
+    setValue({
+      ...value,
       [event.target.name]: event.target.values,
     });
   }
@@ -40,7 +40,7 @@ function Values() {
     };
     const url = `http://localhost:5000/screen/${id}/values`;
     for (let i = 1; i <= 3; i += 1) {
-      config.body = JSON.stringify({ valueName: values[`v${i}`], number: i });
+      config.body = JSON.stringify({ valueName: value[`v${i}`], number: i });
       fetch(url, config)
         .then((res) => res.json())
         .then((res) => {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { useLoginData } from '../../contexts/LoginDataContext'
+import { useLoginData } from '../../contexts/LoginDataContext';
 import arrowRight from '../../pictures/arrowRight.png';
 import ImputComponents from '../ImputComponents/ImputConditional';
 import '../Screen.scss';

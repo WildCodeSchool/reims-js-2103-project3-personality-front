@@ -14,12 +14,12 @@ function Recommandations() {
       <p>Mes recommandations :</p>
       <div className="video-button-container">
         <VideoButton className="reco1" videoSrc={recoVideo1} recoVideo={recoVideo1} imgSrc={recoImg1} />
-        <VideoButton className="reco2" videoSrc={recoVideo2} recoVideo={recoVideo2} imgSrc={recoImg2} />
         <div className="reco3">
           <img className="recoImg3" src={recoImg3} alt="recoImg3" />
           <h2>Albert DUPONTEL - DRH Les parapluies de Cherbourg</h2>
-          <p><i>&quot;En ma qualité de DRH de la société des parapluies de Cherbourg, je recommande sincèrement Jean-Claude Duss pour ses qualités de gestionnaire des stocks de baleines et de matériaux rares en provenance du Honduras.&quot;</i></p>
+          <p><i>&quot;En ma qualité de DRH de la société des parapluies de Cherbourg, je recommande sincèrement Céline pour ses qualités de gestionnaire des stocks de baleines et de matériaux rares en provenance du Honduras.&quot;</i></p>
         </div>
+        <VideoButton className="reco2" videoSrc={recoVideo2} recoVideo={recoVideo2} imgSrc={recoImg2} />
       </div>
     </div>
   );
