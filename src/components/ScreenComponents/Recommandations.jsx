@@ -16,8 +16,8 @@ function Recommandations() {
         <VideoButton className="reco1" videoSrc={recoVideo1} recoVideo={recoVideo1} imgSrc={recoImg1} />
         <div className="reco3">
           <img className="recoImg3" src={recoImg3} alt="recoImg3" />
-          <h2>Albert DUPONTEL - DRH Les parapluies de Cherbourg</h2>
-          <p><i>&quot;En ma qualité de DRH de la société des parapluies de Cherbourg, je recommande sincèrement Céline pour ses qualités de gestionnaire des stocks de baleines et de matériaux rares en provenance du Honduras.&quot;</i></p>
+          <h2>Albert DUPONTEL - DRH Les astres de lumière</h2>
+          <p><i>&quot;Céline exerce avec déontologie, j&apos;entends pas là qu&apos;elle est tenue au secret professionnel, cette éthique lui permet de se démarquer de bien de ses confrères. Elle exerce son activité avec sincérité, loyauté et objectivité.&quot;</i></p>
         </div>
         <VideoButton className="reco2" videoSrc={recoVideo2} recoVideo={recoVideo2} imgSrc={recoImg2} />
       </div>
