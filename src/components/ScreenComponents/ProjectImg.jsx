@@ -33,6 +33,7 @@ function ProjectImg() {
   };
   return (
     <p className="bubble-text projetImg">
+      <span className="help-text-bottom">Uploadez une image d&apos;un projet perso</span>
       <label className="label">
         {' '}
         Image d&apos;un projet :

@@ -56,6 +56,7 @@ function Training() {
   }
   return (
     <p className="bubble-text training">
+      <span className="help-text-top">Renseignez la dernière formation que vous avez effectuée</span>
       <form className="form" onSubmit={submitForm}>
         <label className="label">
           Ma dernière

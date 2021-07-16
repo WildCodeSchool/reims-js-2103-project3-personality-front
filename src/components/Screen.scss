@@ -6,7 +6,7 @@
     grid-template-rows: 14vh 14vh 14vh 14vh 14vh 14vh 14vh;
     gap: 0px 0px;
     grid-template-areas:
-      ". values . . . projet ."
+      ". values . . . project ."
       "personality . . candidate-name . . pPdf"
       ". ambition A . B pImg ."
       ". . . profile-image . lastJob scrollspy"
@@ -40,7 +40,7 @@
     }
     .profile-image {
         grid-area: profile-image;
-        clip-path: circle(50%);
+        //clip-path: circle(50%);
         justify-self: center;
         align-self: center;
         background-image: url('../pictures/profile-violet.png');
@@ -74,7 +74,7 @@
         transform: translate(10em, 13em);
         transition: all 1s ease;
     }
-    .personality-button {
+    .personality, .personality-button {
         grid-area: personality;
         background-color: $pink-color;
         height: 22vmin;
@@ -126,8 +126,8 @@
         justify-self: end;
         align-self: flex-end;
     }
-    .projet {
-        grid-area: projet; 
+    .project {
+        grid-area: project; 
         background-color: $violet-color;
         color: whitesmoke;
         justify-self: end;
@@ -316,7 +316,157 @@ a {
     justify-content: center;
     align-items: center;
 }
+
 .paragraphe{
     margin: 0;
     font-size: 0.8rem;
+
+.profile-image .help-text-bottom,
+.personality-button .help-text-bottom,
+.projetImg .help-text-bottom, 
+.projetPdf .help-text-bottom {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 0.7em;
+    padding: 5px;
+    position: absolute;
+    z-index: 2;
+    top: 98%;
+    left: 20%;
+    font-weight: 400;
+    font-size: 0.8em;
+    line-height: 1.5em;
+    
+    /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.profile-image:hover .help-text-bottom,
+.personality-button:hover .help-text-bottom,
+.projetImg:hover .help-text-bottom, 
+.projetPdf:hover .help-text-bottom {
+    visibility: visible;
+    opacity: 1;
+}
+
+.profile-image .help-text-bottom-profile {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 0.7em;
+    padding: 5px;
+    position: absolute;
+    z-index: 2;
+    top: 59%;
+    left: 45%;
+    font-weight: 450;
+    font-size: 1em;
+    line-height: 1.5em;
+    
+    /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.profile-image:hover .help-text-bottom-profile {
+    visibility: visible;
+    opacity: 1;
+}
+
+.ambition .help-text-left,
+.project .help-text-left, 
+.diplome .help-text-left {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 0.7em;
+    padding: 5px;
+    position: absolute;
+    z-index: 2;
+    bottom: 30%;
+    right: 90%;
+    font-weight: 400;
+    font-size: 0.8em;
+    line-height: 1.5em;
+    
+    /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.ambition:hover .help-text-left,
+.project:hover .help-text-left, 
+.diplome:hover .help-text-left {
+    visibility: visible;
+    opacity: 1;
+}
+
+.values .help-text-right,
+.soft-skills .help-text-right,
+.langues .help-text-right {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 0.7em;
+    padding: 5px;
+    position: absolute;
+    z-index: 2;
+    bottom: 30%;
+    left: 90%;
+    font-weight: 400;
+    font-size: 0.8em;
+    line-height: 1.5em;
+    
+    /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.values:hover .help-text-right,
+.soft-skills:hover .help-text-right,
+.langues:hover .help-text-right {
+    visibility: visible;
+    opacity: 1;
+}
+
+.hard-skills .help-text-top,
+.strength .help-text-top,
+.lastJob .help-text-top, 
+.training .help-text-top {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 0.7em;
+    padding: 5px;
+    position: absolute;
+    z-index: 2;
+    bottom: 30%;
+    bottom: 95%;
+    font-weight: 400;
+    font-size: 0.8em;
+    line-height: 1.5em;
+    
+    /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.hard-skills:hover .help-text-top,
+.strength:hover .help-text-top,
+.lastJob:hover .help-text-top, 
+.training:hover .help-text-top {
+    visibility: visible;
+    opacity: 1;
 }

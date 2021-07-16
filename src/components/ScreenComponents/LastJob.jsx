@@ -56,6 +56,7 @@ function LastJob() {
   }
   return (
     <p className="bubble-text lastJob">
+      <span className="help-text-top">Renseignez votre dernier poste occupé</span>
       <form className="test" onSubmit={submitForm}>
         <label className="label">
           Mon dernier

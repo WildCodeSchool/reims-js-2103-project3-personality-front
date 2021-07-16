@@ -58,6 +58,7 @@ function Ambition() {
   }
   return (
     <p className="bubble-text ambition">
+      <span className="help-text-left">Quelles sont vos ambitions ?</span>
       <form className="form" onSubmit={submitForm}>
         <label className="label">Mes ambitions :</label>
         <ImputComponents type="text" name="a1" onChange={onChange} value={ambition.a1} />

@@ -56,6 +56,7 @@ function Diplome() {
   }
   return (
     <p className="bubble-text diplome">
+      <span className="help-text-left">Renseignez le diplôme le plus élevé que vous ayez obtenu</span>
       <form className="form" onSubmit={submitForm}>
         <label className="label">
           Mon diplôme

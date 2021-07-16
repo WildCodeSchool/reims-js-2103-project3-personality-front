@@ -57,6 +57,7 @@ function Langues() {
   }
   return (
     <p className="bubble-text langues">
+      <span className="help-text-right">Renseignez les langues que vous parlez</span>
       <form className="form" onSubmit={submitForm}>
         <label className="label">
           Mes
