@@ -1,8 +1,10 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import PersonalityLogo from './PersonalityLogo';
 import './Register.scss';
 
 function Register() {
+  const history = useHistory();
   const [user, setUser] = React.useState({
     name: '',
     username: '',
@@ -35,6 +37,8 @@ function Register() {
           alert(res.error);
         } else {
           alert('L’utilisateur a été ajouté avec succès !');
+          setUser(res);
+          history.push('/login');
         }
       })
       .catch((e) => {

@@ -3,12 +3,13 @@
 .carousel-container {
   display: flex;
   flex-direction: column;
-  margin: 7em;
+  margin-top: 17em;
   p {
     align-self: center;
     font-size: 1.5em;
     font-weight: 600;
-    color: $violet-color
+    color: $violet-color;
+    margin-bottom: -5em;
   }
 }
 
@@ -61,7 +62,7 @@ $mode: cubic-bezier(.17, .67, .55, 1.43);
           left: 50%;
           top: 0%;
           width: 50%;
-          height: 80%;
+          height: 10%;
           transform: translateX(-50%);
           .slider-single {
             position: absolute;
