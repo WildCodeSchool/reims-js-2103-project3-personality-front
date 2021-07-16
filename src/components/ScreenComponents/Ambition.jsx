@@ -20,7 +20,7 @@ function Ambition() {
         setAmbition(res.reduce((acc, ambitions) => ({ ...acc, [`a${ambitions.number}`]: ambitions.ambition }), {}));
         console.log(res);
       });
-  }, []);
+  }, [id]);
 
   function onChange(event) {
     setAmbition({

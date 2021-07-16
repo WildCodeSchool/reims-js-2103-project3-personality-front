@@ -55,6 +55,18 @@
         border-radius: 50%;
         font-weight: 700;
     }
+    .profile-images {
+        position: relative;
+        border: solid 4px $violet-color ;
+        bottom: 79px;
+        right: 22px;
+        background-size: cover;
+        height: 22vmin;
+        width: 22vmin;
+        border-radius: 50%;
+        font-weight: 700;
+        z-index: 99;
+    }
     .submit {
         border: none;
         background: transparent;
@@ -64,6 +76,7 @@
     }
     .arrow-right {
         height: 3em;
+        z-index: 1;
     }
     .candidate-name {
         grid-area: candidate-name;
@@ -320,6 +333,7 @@ a {
 .paragraphe{
     margin: 0;
     font-size: 0.8rem;
+}
 
 .profile-image .help-text-bottom,
 .personality-button .help-text-bottom,
