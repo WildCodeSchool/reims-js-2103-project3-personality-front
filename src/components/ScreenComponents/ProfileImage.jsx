@@ -9,24 +9,26 @@ function ProfileImage() {
   const { id } = useParams();
   const { loginData } = useLoginData();
   const [selectedFile, setSelectedFile] = React.useState();
-  const [photo, setPhoto] = React.useState();
+  const [photos, setPhotos] = React.useState();
 
   React.useEffect(() => {
     fetch(`http://localhost:5000/screen/${id}/photos`)
       .then((response) => response.json())
       .then((res) => {
-        setPhoto(res);
-        console.log(res);
+        setPhotos(res[0]?.photo);
+        console.log(res[0]?.photo);
       });
-  }, []);
+  }, [id]);
 
   const changeHandler = (event) => {
     setSelectedFile(event.target.files[0]);
   };
 
   const handleSubmission = () => {
+    const i = 1;
     const formData = new FormData();
-    formData.append('File', selectedFile);
+    formData.append('blob', selectedFile);
+    formData.append('number', i);
 
     fetch(
       `http://localhost:5000/screen/${id}/photos`,
@@ -39,11 +41,13 @@ function ProfileImage() {
       .then((response) => response.json())
       .then((result) => {
         console.log('Success:', result);
+        setPhotos(result.photo);
       })
       .catch((error) => {
         console.error('Error:', error);
       });
   };
+
   return (
     <div className="profile-image">
       <label className="label-shadow">
@@ -51,7 +55,7 @@ function ProfileImage() {
       </label>
       <label className="label-file">
         Choisir un fichier
-        <ImputFiles name="File" onChange={changeHandler} />
+        <ImputFiles name="blob" onChange={changeHandler} src={photos} alt="" />
       </label>
       <button type="submit" className="submit" onClick={handleSubmission}><img className="arrow-right" src={arrowRight} alt="arrow-right" /></button>
     </div>

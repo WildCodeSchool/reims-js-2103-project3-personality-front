@@ -60,9 +60,9 @@ function Values() {
     <p className="bubble-text values">
       <form className="form" onSubmit={submitForm}>
         <label className="label">Mes valeurs :</label>
-        <ImputComponents type="text" name="v1" onChange={onChange} value={value.v1} />
-        <ImputComponents type="text" name="v2" onChange={onChange} value={value.v2} />
-        <ImputComponents type="text" name="v3" onChange={onChange} value={value.v3} />
+        <ImputComponents type="text" name="v1" onChange={onChange} value={values.v1} />
+        <ImputComponents type="text" name="v2" onChange={onChange} value={values.v2} />
+        <ImputComponents type="text" name="v3" onChange={onChange} value={values.v3} />
         <button type="submit" className="submit"><img className="arrow-right" src={arrowRight} alt="arrow-right" /></button>
       </form>
     </p>
