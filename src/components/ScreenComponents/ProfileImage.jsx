@@ -12,7 +12,7 @@ function ProfileImage() {
   const [photos, setPhotos] = React.useState();
 
   React.useEffect(() => {
-    fetch(`http://localhost:5000/screen/${id}/photos`)
+    fetch(`http://localhost:5000/screen/${id}/${photo}`)
       .then((response) => response.json())
       .then((res) => {
         setPhotos(res[0]?.photo);
@@ -31,7 +31,7 @@ function ProfileImage() {
     formData.append('number', i);
 
     fetch(
-      `http://localhost:5000/screen/${id}/photos`,
+      `http://localhost:5000/screen/${id}/${photo}`,
       {
         method: 'POST',
         headers: { Authorization: `Bearer ${loginData.token}` },

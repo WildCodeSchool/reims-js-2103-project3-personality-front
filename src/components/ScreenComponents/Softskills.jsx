@@ -59,7 +59,7 @@ function Softskills() {
   }
   return (
     <p className="bubble-text soft-skills">
-      <span className="help-text-right">Listez vos softskills qui vous paraissent les plus importantes</span>
+      <span className="help-text-right">Listez vos qualités humaines les plus importantes</span>
       <form className="form" onSubmit={submitForm}>
         <label className="label">Mes softskills :</label>
         <ImputComponents type="text" name="sk1" onChange={onChange} value={softskills.sk1} />
