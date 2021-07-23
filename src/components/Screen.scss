@@ -58,8 +58,8 @@
     .profile-images {
         position: relative;
         border: solid 4px $violet-color ;
-        bottom: 79px;
-        right: 22px;
+        bottom: 105px;
+        right: 29px;
         background-size: cover;
         height: 22vmin;
         width: 22vmin;
@@ -483,5 +483,4 @@ a {
 .training:hover .help-text-top {
     visibility: visible;
     opacity: 1;
-}
 }
