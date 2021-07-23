@@ -12,6 +12,14 @@ function Project() {
     p3: '',
   });
 
+  React.useEffect(() => {
+    fetch(`http://localhost:5000/screen/${id}/softskills`)
+      .then((response) => response.json())
+      .then((res) => {
+        setProjet(res.reduce((acc, pops) => ({ ...acc, [`sk${pops.number}`]: pops.projet }), {}));
+        console.log(res);
+      });
+  }, []);
   function onChange(event) {
     setProjet({
       ...projet,
@@ -48,8 +56,8 @@ function Project() {
       <span className="help-text-left">Entrez les URL de vos projets perso</span>
       <form className="form" onSubmit={submitForm}>
         <label className="label">Mes projets :</label>
-        <ImputComponents type="url" name="p1" onChange={onChange} value={projet.p1} />
-        <ImputComponents type="url" name="p2" onChange={onChange} value={projet.p2} />
+        <ImputComponents type="url" name="p1" onChange={onChange} value="https://www.hypnose.fr" />
+        <ImputComponents type="url" name="p2" onChange={onChange} value="https://www.voyance-medium.fr/" />
         <ImputComponents type="url" name="p3" onchange={onChange} value={projet.p3} />
         <button type="submit" className="submit"><img className="arrow-right" src={arrowRight} alt="arrow-right" /></button>
       </form>

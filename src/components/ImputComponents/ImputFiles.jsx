@@ -11,7 +11,7 @@ function ImputFiles({
   const { loginData } = useLoginData();
   return (
     <>
-      {loginData?.userId === parseInt(id, 10) ? <input className="input-file" type="file" name={name} onChange={onChange} /> : <img className="profile-images" src={`http://localhost:5000/uploads/${src}`} alt={alt} />}
+      {loginData?.userId === parseInt(id, 10) ? <input className="input-file" type="file" name={name} onChange={onChange} /> : src && <img className="profile-images" src={`http://localhost:5000/uploads/${src}`} alt={alt} />}
     </>
   );
 }
