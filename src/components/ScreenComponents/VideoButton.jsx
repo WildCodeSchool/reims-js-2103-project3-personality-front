@@ -12,7 +12,7 @@ function VideoButton({ videoSrc, imgSrc, recoVideo }) {
       buttonContent={(
         <HoverVideoPlayer
           videoSrc={videoSrc}
-          volume={0.5}
+          volume={0}
           muted={false}
           pausedOverlay={(
             <img
