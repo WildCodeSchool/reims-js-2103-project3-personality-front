@@ -28,7 +28,7 @@ function Register() {
       },
       body: JSON.stringify(user),
     };
-    const url = 'http://localhost:5000/users';
+    const url = `${process.env.REACT_APP_BACK_URL}/users`;
     fetch(url, config)
       .then((res) => res.json())
       .then((res) => {

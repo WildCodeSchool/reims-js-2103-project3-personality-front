@@ -12,7 +12,7 @@ function Training() {
     t1: '',
   });
   React.useEffect(() => {
-    fetch(`http://localhost:5000/screen/${id}/formation`)
+    fetch(`${process.env.REACT_APP_BACK_URL}/screen/${id}/formation`)
       .then((response) => response.json())
       .then((res) => {
         setTraining(res.reduce((acc, trainings) => ({ ...acc, [`t${trainings.number}`]: trainings.formation }), {}));
@@ -36,7 +36,7 @@ function Training() {
         Authorization: `Bearer ${loginData.token}`,
       },
     };
-    const url = `http://localhost:5000/screen/${id}/formation`;
+    const url = `${process.env.REACT_APP_BACK_URL}/screen/${id}/formation`;
     for (let i = 1; i <= 1; i += 1) {
       config.body = JSON.stringify({ formation: training[`t${i}`], number: i });
       fetch(url, config)

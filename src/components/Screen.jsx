@@ -35,7 +35,7 @@ function Screen() {
   const { id } = useParams();
 
   useEffect(() => {
-    fetch(`http://localhost:5000/users/${id}`)
+    fetch(`${process.env.REACT_APP_BACK_URL}/users/${id}`)
       .then((response) => response.json())
       .then((res) => {
         setName(res.name);

@@ -34,7 +34,7 @@ function Login() {
       },
       body: JSON.stringify(login),
     };
-    const url = 'http://localhost:5000/login';
+    const url = `${process.env.REACT_APP_BACK_URL}/login`;
     fetch(url, config)
       .then((res) => res.json())
       .then((res) => {

@@ -14,7 +14,7 @@ function Strength() {
     s3: '',
   });
   React.useEffect(() => {
-    fetch(`http://localhost:5000/screen/${id}/strength`)
+    fetch(`${process.env.REACT_APP_BACK_URL}/screen/${id}/strength`)
       .then((response) => response.json())
       .then((res) => {
         setStrength(res.reduce((acc, strengths) => ({ ...acc, [`s${strengths.number}`]: strengths.strength }), {}));
@@ -38,7 +38,7 @@ function Strength() {
         Authorization: `Bearer ${loginData.token}`,
       },
     };
-    const url = `http://localhost:5000/screen/${id}/strength`;
+    const url = `${process.env.REACT_APP_BACK_URL}/screen/${id}/strength`;
     for (let i = 1; i <= 3; i += 1) {
       config.body = JSON.stringify({ strength: strength[`s${i}`], number: i });
       fetch(url, config)

@@ -15,7 +15,7 @@ function Softskills() {
   });
 
   React.useEffect(() => {
-    fetch(`http://localhost:5000/screen/${id}/softskills`)
+    fetch(`${process.env.REACT_APP_BACK_URL}/screen/${id}/softskills`)
       .then((response) => response.json())
       .then((res) => {
         setSoftskills(res.reduce((acc, softskill) => ({ ...acc, [`sk${softskill.number}`]: softskill.softskills }), {}));
@@ -39,7 +39,7 @@ function Softskills() {
         Authorization: `Bearer ${loginData.token}`,
       },
     };
-    const url = `http://localhost:5000/screen/${id}/softskills`;
+    const url = `${process.env.REACT_APP_BACK_URL}/screen/${id}/softskills`;
     for (let i = 1; i <= 3; i += 1) {
       config.body = JSON.stringify({ softskills: softskills[`sk${i}`], number: i });
       fetch(url, config)

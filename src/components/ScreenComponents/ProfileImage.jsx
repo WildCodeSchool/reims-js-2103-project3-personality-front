@@ -12,7 +12,7 @@ function ProfileImage() {
   const [photos, setPhotos] = React.useState();
 
   React.useEffect(() => {
-    fetch(`http://localhost:5000/screen/${id}/photos`)
+    fetch(`${process.env.REACT_APP_BACK_URL}/screen/${id}/photos`)
       .then((response) => response.json())
       .then((res) => {
         setPhotos(res[0]?.photo);
@@ -31,7 +31,7 @@ function ProfileImage() {
     formData.append('number', i);
 
     fetch(
-      `http://localhost:5000/screen/${id}/photos`,
+      `${process.env.REACT_APP_BACK_URL}/screen/${id}/photos`,
       {
         method: 'POST',
         headers: { Authorization: `Bearer ${loginData.token}` },
