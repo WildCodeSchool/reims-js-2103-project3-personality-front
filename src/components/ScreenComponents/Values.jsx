@@ -14,7 +14,7 @@ function Values() {
     v3: '',
   });
   React.useEffect(() => {
-    fetch(`http://localhost:5000/screen/${id}/values`)
+    fetch(`${process.env.REACT_APP_BACK_URL}/screen/${id}/values`)
       .then((response) => response.json())
       .then((res) => {
         setValue(res.reduce((acc, values) => ({ ...acc, [`v${values.number}`]: values.valueName }), {}));
@@ -38,7 +38,7 @@ function Values() {
         Authorization: `Bearer ${loginData.token}`,
       },
     };
-    const url = `http://localhost:5000/screen/${id}/values`;
+    const url = `${process.env.REACT_APP_BACK_URL}/screen/${id}/values`;
     for (let i = 1; i <= 3; i += 1) {
       config.body = JSON.stringify({ valueName: value[`v${i}`], number: i });
       fetch(url, config)

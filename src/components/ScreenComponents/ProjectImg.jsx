@@ -17,7 +17,7 @@ function ProjectImg() {
     formData.append('File', selectedFile);
 
     fetch(
-      `http://localhost:5000/screen/${id}/pop`,
+      `${process.env.REACT_APP_BACK_URL}/screen/${id}/pop`,
       {
         method: 'POST',
         body: formData,

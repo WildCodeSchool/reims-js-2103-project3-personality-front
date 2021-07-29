@@ -13,7 +13,7 @@ function Langues() {
     l2: '',
   });
   React.useEffect(() => {
-    fetch(`http://localhost:5000/screen/${id}/langues`)
+    fetch(`${process.env.REACT_APP_BACK_URL}/screen/${id}/langues`)
       .then((response) => response.json())
       .then((res) => {
         setLangues(res.reduce((acc, langue) => ({ ...acc, [`l${langue.number}`]: langue.langueName }), {}));
@@ -37,7 +37,7 @@ function Langues() {
         Authorization: `Bearer ${loginData.token}`,
       },
     };
-    const url = `http://localhost:5000/screen/${id}/langues`;
+    const url = `${process.env.REACT_APP_BACK_URL}/screen/${id}/langues`;
     for (let i = 1; i <= 2; i += 1) {
       config.body = JSON.stringify({ langueName: langues[`l${i}`], number: i });
       fetch(url, config)

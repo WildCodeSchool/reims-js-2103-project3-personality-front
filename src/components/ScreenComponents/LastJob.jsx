@@ -12,7 +12,7 @@ function LastJob() {
     lj1: '',
   });
   React.useEffect(() => {
-    fetch(`http://localhost:5000/screen/${id}/lastjob`)
+    fetch(`${process.env.REACT_APP_BACK_URL}/screen/${id}/lastjob`)
       .then((response) => response.json())
       .then((res) => {
         setLastJob(res.reduce((acc, lastjobs) => ({ ...acc, [`lj${lastjobs.number}`]: lastjobs.lastjob }), {}));
@@ -36,7 +36,7 @@ function LastJob() {
         Authorization: `Bearer ${loginData.token}`,
       },
     };
-    const url = `http://localhost:5000/screen/${id}/lastjob`;
+    const url = `${process.env.REACT_APP_BACK_URL}/screen/${id}/lastjob`;
     for (let i = 1; i <= 1; i += 1) {
       config.body = JSON.stringify({ lastjob: lastJob[`lj${i}`], number: i });
       fetch(url, config)

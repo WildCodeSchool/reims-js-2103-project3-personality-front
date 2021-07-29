@@ -14,7 +14,7 @@ function Hardskills() {
     hk3: '',
   });
   React.useEffect(() => {
-    fetch(`http://localhost:5000/screen/${id}/hardSkills`)
+    fetch(`${process.env.REACT_APP_BACK_URL}/screen/${id}/hardSkills`)
       .then((response) => response.json())
       .then((res) => {
         setHardskills(res.reduce((acc, hardskill) => ({ ...acc, [`hk${hardskill.number}`]: hardskill.hardSkillsName }), {}));
@@ -38,7 +38,7 @@ function Hardskills() {
         Authorization: `Bearer ${loginData.token}`,
       },
     };
-    const url = `http://localhost:5000/screen/${id}/hardSkills`;
+    const url = `${process.env.REACT_APP_BACK_URL}/screen/${id}/hardSkills`;
     for (let i = 1; i <= 3; i += 1) {
       config.body = JSON.stringify({ hardSkillsName: hardskills[`hk${i}`], number: i });
       fetch(url, config)

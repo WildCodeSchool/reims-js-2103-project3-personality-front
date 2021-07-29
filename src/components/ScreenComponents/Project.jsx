@@ -13,7 +13,7 @@ function Project() {
   });
 
   React.useEffect(() => {
-    fetch(`http://localhost:5000/screen/${id}/softskills`)
+    fetch(`${process.env.REACT_APP_BACK_URL}/screen/${id}/softskills`)
       .then((response) => response.json())
       .then((res) => {
         setProjet(res.reduce((acc, pops) => ({ ...acc, [`sk${pops.number}`]: pops.projet }), {}));
@@ -36,7 +36,7 @@ function Project() {
       },
       body: JSON.stringify(projet),
     };
-    const url = `http://localhost:5000/screen/${id}/pop`;
+    const url = `${process.env.REACT_APP_BACK_URL}/screen/${id}/pop`;
     fetch(url, config)
       .then((res) => res.json())
       .then((res) => {

@@ -12,7 +12,7 @@ function Diplome() {
     d1: '',
   });
   React.useEffect(() => {
-    fetch(`http://localhost:5000/screen/${id}/diplome`)
+    fetch(`${process.env.REACT_APP_BACK_URL}/screen/${id}/diplome`)
       .then((response) => response.json())
       .then((res) => {
         setDiplome(res.reduce((acc, diplomes) => ({ ...acc, [`d${diplomes.number}`]: diplomes.diplome }), {}));
@@ -36,7 +36,7 @@ function Diplome() {
         Authorization: `Bearer ${loginData.token}`,
       },
     };
-    const url = `http://localhost:5000/screen/${id}/diplome`;
+    const url = `${process.env.REACT_APP_BACK_URL}/screen/${id}/diplome`;
     for (let i = 1; i <= 1; i += 1) {
       config.body = JSON.stringify({ diplome: diplome[`d${i}`], number: i });
       fetch(url, config)

@@ -14,7 +14,7 @@ function Ambition() {
     a3: '',
   });
   React.useEffect(() => {
-    fetch(`http://localhost:5000/screen/${id}/ambition`)
+    fetch(`${process.env.REACT_APP_BACK_URL}/screen/${id}/ambition`)
       .then((response) => response.json())
       .then((res) => {
         setAmbition(res.reduce((acc, ambitions) => ({ ...acc, [`a${ambitions.number}`]: ambitions.ambition }), {}));
@@ -38,7 +38,7 @@ function Ambition() {
         Authorization: `Bearer ${loginData.token}`,
       },
     };
-    const url = `http://localhost:5000/screen/${id}/ambition`;
+    const url = `${process.env.REACT_APP_BACK_URL}/screen/${id}/ambition`;
     for (let i = 1; i <= 3; i += 1) {
       config.body = JSON.stringify({ ambition: ambition[`a${i}`], number: i });
       fetch(url, config)
